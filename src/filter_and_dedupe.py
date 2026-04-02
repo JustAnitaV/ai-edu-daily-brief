@@ -4,6 +4,20 @@ import os
 
 HISTORY_FILE = "data/sent_history.json"
 
+from datetime import datetime, timedelta
+import email.utils
+
+
+def is_recent(pub_date_str, hours=48):
+    if not pub_date_str:
+        return True  # keep if unknown
+
+    try:
+        dt = email.utils.parsedate_to_datetime(pub_date_str)
+        return datetime.utcnow() - dt.replace(tzinfo=None) < timedelta(hours=hours)
+    except:
+        return True
+
 
 def load_history():
     if not os.path.exists(HISTORY_FILE):
@@ -35,6 +49,9 @@ def filter_and_dedupe(items):
 
     new_items = []
     for item in items:
+        if not is_recent(item.get("published")):
+            continue
+
         if not is_duplicate(item, history):
             new_items.append(item)
 
