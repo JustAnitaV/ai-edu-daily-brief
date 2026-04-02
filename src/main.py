@@ -3,7 +3,7 @@ from fetch_news import fetch_news
 from filter_and_dedupe import filter_and_dedupe, update_history
 from summarize import summarize_news
 from send_email import send_email
-
+from build_email import wrap_email
 from datetime import datetime
 
 subject = f"AI in Education Daily Brief - {datetime.utcnow().date()}"
@@ -19,12 +19,14 @@ def main():
         print(f"Latvia items after dedupe: {len(latvia_items)}")
 
         if not world_items and not latvia_items:
-            html_body = """
+            content = """
             <h2>AI in Education Daily Brief</h2>
             <p><strong>No new qualifying items were found today.</strong> No fresh AI-in-education items passed the current filters for world or Latvia sources. Avots: <a href="https://news.google.com/">Google News</a></p>
             """
+            html_body = wrap_email(content)
         else:
-            html_body = summarize_news(world_items[:5], latvia_items[:3])
+            content = summarize_news(world_items[:5], latvia_items[:3])
+            html_body = wrap_email(content)
 
         subject = "AI in Education Daily Brief"
         send_email(subject, html_body)
