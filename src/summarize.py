@@ -6,26 +6,30 @@ def summarize_news(world_items, latvia_items):
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     def format_items(items):
-        return "\n".join([
-            f"- {i['title']} ({i['url']})"
-            for i in items
-        ])
+        if not items:
+            return "None"
+        return "\n".join(
+            [f"- {i['title']} | {i['url']} | {i.get('source', 'Unknown source')}" for i in items]
+        )
 
     prompt = f"""
 You generate a daily email briefing about artificial intelligence in education.
 
-Return valid HTML only.
+Return valid HTML only. Do not wrap output in markdown fences.
 
 Rules:
-1. 🌍 World news: 3–5 items
-2. 🇱🇻 Latvijas jaunumi: 1–3 items (only if available)
-3. Each item:
-   - bold theme sentence
-   - one paragraph
-   - end with: Avots: clickable link
-4. World news must be in English + Latvian
-5. Latvia news must be perfect Latvian
-6. Do not repeat titles
+1. Create section heading: <h2>🌍 World news</h2>
+2. Include 3–5 world items if available. If fewer are available, use only what is provided.
+3. Create section heading: <h2>🇱🇻 Latvijas jaunumi</h2>
+4. Include 1–3 Latvia items only if available. If none are available, write one short Latvian sentence saying that no new Latvia-specific items were found today.
+5. Each news item must:
+   - start with a bold theme sentence that is a clear statement
+   - be written as one paragraph
+   - end with: Avots: and a clickable HTML link
+6. World news: for each item, first write the English paragraph, then the Latvian paragraph.
+7. Latvian news: perfect Latvian only.
+8. Keep tone concise, factual, professional.
+9. Use only the provided items. Do not invent details.
 
 WORLD NEWS INPUT:
 {format_items(world_items)}
@@ -39,4 +43,7 @@ LATVIA NEWS INPUT:
         input=prompt
     )
 
-    return response.output_text
+    if hasattr(response, "output_text") and response.output_text:
+        return response.output_text
+
+    raise RuntimeError(f"OpenAI response did not include output_text: {response}")
