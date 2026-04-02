@@ -15,21 +15,46 @@ def summarize_news(world_items, latvia_items):
     prompt = f"""
 You generate a daily email briefing about artificial intelligence in education.
 
-Return valid HTML only. Do not wrap output in markdown fences.
+Return clean HTML only. No markdown.
 
-Rules:
-1. Create section heading: <h2>🌍 World news</h2>
-2. Include 3–5 world items if available. If fewer are available, use only what is provided.
-3. Create section heading: <h2>🇱🇻 Latvijas jaunumi</h2>
-4. Include 1–3 Latvia items only if available. If none are available, write one short Latvian sentence saying that no new Latvia-specific items were found today.
-5. Each news item must:
-   - start with a bold theme sentence that is a clear statement
-   - be written as one paragraph
-   - end with: Avots: and a clickable HTML link
-6. World news: for each item, first write the English paragraph, then the Latvian paragraph.
-7. Latvian news: perfect Latvian only.
-8. Keep tone concise, factual, professional.
-9. Use only the provided items. Do not invent details.
+STRICT STRUCTURE:
+
+- Use <h2> for section titles
+- Each news item MUST be inside its own <div style="margin-bottom:20px;">
+- Each language block must be a separate <p>
+- Add spacing for readability
+
+FORMAT EXACTLY LIKE THIS:
+
+<h2>🌍 World news</h2>
+
+<div>
+  <p><strong>English theme sentence.</strong> English paragraph. Avots: <a href="URL">Source</a></p>
+  <p><strong>Latvian theme sentence.</strong> Latvian paragraph. Avots: <a href="URL">Avots</a></p>
+</div>
+
+(repeat per item)
+
+<h2>🇱🇻 Latvijas jaunumi</h2>
+
+<div>
+  <p><strong>Latvian theme sentence.</strong> Latvian paragraph. Avots: <a href="URL">Avots</a></p>
+</div>
+
+RULES:
+
+1. 🌍 World news → 3–5 items
+2. 🇱🇻 Latvijas jaunumi → 1–3 items (or 1 short sentence if none)
+3. EACH item:
+   - MUST be inside <div style="margin-bottom:20px;">
+   - MUST NOT merge multiple items into one paragraph
+4. World news:
+   - English paragraph FIRST
+   - Latvian paragraph SECOND
+5. Latvian section:
+   - Latvian only
+6. Keep tone concise and factual
+7. Use ONLY provided items
 
 WORLD NEWS INPUT:
 {format_items(world_items)}
@@ -43,7 +68,4 @@ LATVIA NEWS INPUT:
         input=prompt
     )
 
-    if hasattr(response, "output_text") and response.output_text:
-        return response.output_text
-
-    raise RuntimeError(f"OpenAI response did not include output_text: {response}")
+    return response.output_text
