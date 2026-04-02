@@ -4,9 +4,7 @@ from filter_and_dedupe import filter_and_dedupe, update_history
 from summarize import summarize_news
 from send_email import send_email
 from build_email import wrap_email
-from datetime import datetime
 
-subject = f"AI in Education Daily Brief - {datetime.utcnow().date()}"
 
 def main():
     try:
@@ -23,10 +21,10 @@ def main():
             <h2>AI in Education Daily Brief</h2>
             <p><strong>No new qualifying items were found today.</strong> No fresh AI-in-education items passed the current filters for world or Latvia sources. Avots: <a href="https://news.google.com/">Google News</a></p>
             """
-            html_body = wrap_email(content)
         else:
             content = summarize_news(world_items[:5], latvia_items[:3])
-            html_body = wrap_email(content)
+
+        html_body = wrap_email(content)
 
         subject = "AI in Education Daily Brief"
         send_email(subject, html_body)
@@ -46,11 +44,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-if len(world_items) < 2:
-    html_body = """
-    <h2>AI in Education Daily Brief</h2>
-    <p><strong>No sufficient new items today.</strong> Not enough high-quality new AI in education news was found in the last run. Avots: <a href="https://news.google.com/">Google News</a></p>
-    """
-else:
-    html_body = summarize_news(world_items[:5], latvia_items[:3])
