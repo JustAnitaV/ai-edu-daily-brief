@@ -4,6 +4,9 @@ from filter_and_dedupe import filter_and_dedupe, update_history
 from summarize import summarize_news
 from send_email import send_email
 
+from datetime import datetime
+
+subject = f"AI in Education Daily Brief - {datetime.utcnow().date()}"
 
 def main():
     try:
