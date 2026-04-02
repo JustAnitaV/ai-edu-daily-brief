@@ -47,9 +47,15 @@ def google_news_rss(query: str, lang: str = "en", country: str = "US") -> str:
 
 def fetch_news() -> dict:
     world_sources = [
-        ("Google News: AI in education", google_news_rss("artificial intelligence in education", "en", "US")),
-        ("Google News: generative AI schools", google_news_rss("generative AI schools education", "en", "US")),
+        ("Google News World: AI in education", google_news_rss("artificial intelligence in education", "en", "US")),
+        ("Google News World: generative AI schools", google_news_rss("generative AI schools education", "en", "US")),
         ("Edutopia", "https://www.edutopia.org/rss.xml"),
+    ]
+
+    europe_sources = [
+        ("Google News Europe: AI in education", google_news_rss("artificial intelligence in education Europe", "en", "GB")),
+        ("Google News Europe: generative AI schools Europe", google_news_rss("generative AI schools Europe education", "en", "GB")),
+        ("Google News Europe: universities AI teaching Europe", google_news_rss("universities AI teaching Europe", "en", "GB")),
     ]
 
     latvia_sources = [
@@ -64,6 +70,13 @@ def fetch_news() -> dict:
         except Exception as e:
             print(f"Warning: failed to fetch world source {source_name}: {e}")
 
+    europe = []
+    for source_name, url in europe_sources:
+        try:
+            europe.extend(fetch_feed(url, source_name))
+        except Exception as e:
+            print(f"Warning: failed to fetch Europe source {source_name}: {e}")
+
     latvia = []
     for source_name, url in latvia_sources:
         try:
@@ -72,9 +85,11 @@ def fetch_news() -> dict:
             print(f"Warning: failed to fetch Latvia source {source_name}: {e}")
 
     print(f"Total world items: {len(world)}")
+    print(f"Total Europe items: {len(europe)}")
     print(f"Total Latvia items: {len(latvia)}")
 
     return {
         "world": world,
+        "europe": europe,
         "latvia": latvia
     }
