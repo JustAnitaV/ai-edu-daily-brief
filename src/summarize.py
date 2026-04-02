@@ -15,46 +15,63 @@ def summarize_news(world_items, latvia_items):
     prompt = f"""
 You generate a daily email briefing about artificial intelligence in education.
 
-Return clean HTML only. No markdown.
+Return clean HTML only. Do not use markdown. Do not wrap output in code fences.
 
-STRICT STRUCTURE:
+STRICT REQUIREMENTS:
 
-- Use <h2> for section titles
-- Each news item MUST be inside its own <div style="margin-bottom:20px;">
-- Each language block must be a separate <p>
-- Add spacing for readability
+1. Use this exact section header styling:
+<h2 style="margin-top:30px;">🌍 World news</h2>
+<h2 style="margin-top:30px;">🇱🇻 Latvijas jaunumi</h2>
 
-FORMAT EXACTLY LIKE THIS:
+2. Each news item MUST be visually separated and MUST use this exact outer container:
+<div style="margin-bottom:25px; padding-bottom:15px; border-bottom:1px solid #eee;">
 
-<h2>🌍 World news</h2>
+3. WORLD NEWS:
+- Include 3–5 items if available
+- For each item, write:
+  a) one English block
+  b) one Latvian block
+- The English block must come first
+- The Latvian block must come second
 
-<div>
-  <p><strong>English theme sentence.</strong> English paragraph. Avots: <a href="URL">Source</a></p>
-  <p><strong>Latvian theme sentence.</strong> Latvian paragraph. Avots: <a href="URL">Avots</a></p>
+4. LATVIJAS JAUNUMI:
+- Include 1–3 items if available
+- Write only in perfect Latvian
+- If there are no Latvia items, write one short Latvian sentence saying no new Latvia-specific items were found today
+
+5. EACH LANGUAGE BLOCK MUST USE EXACTLY THIS HTML STRUCTURE:
+
+<p style="margin:0 0 8px 0;"><strong>Theme sentence.</strong></p>
+<p style="margin:0 0 8px 0;">Paragraph text.</p>
+<p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Source</a></p>
+
+6. IMPORTANT:
+- Do NOT merge multiple items into one paragraph
+- Do NOT place all world news into one block
+- Each item must have its own separate <div ...> container
+- Keep tone concise, factual, professional
+- Use ONLY the provided items
+- Do NOT invent facts, dates, names, or sources
+
+7. WORLD NEWS ITEM TEMPLATE:
+
+<div style="margin-bottom:25px; padding-bottom:15px; border-bottom:1px solid #eee;">
+  <p style="margin:0 0 8px 0;"><strong>English theme sentence.</strong></p>
+  <p style="margin:0 0 8px 0;">English paragraph.</p>
+  <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Source</a></p>
+
+  <p style="margin:12px 0 8px 0;"><strong>Latvian theme sentence.</strong></p>
+  <p style="margin:0 0 8px 0;">Latvian paragraph.</p>
+  <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Avots</a></p>
 </div>
 
-(repeat per item)
+8. LATVIA ITEM TEMPLATE:
 
-<h2>🇱🇻 Latvijas jaunumi</h2>
-
-<div>
-  <p><strong>Latvian theme sentence.</strong> Latvian paragraph. Avots: <a href="URL">Avots</a></p>
+<div style="margin-bottom:25px; padding-bottom:15px; border-bottom:1px solid #eee;">
+  <p style="margin:0 0 8px 0;"><strong>Latvian theme sentence.</strong></p>
+  <p style="margin:0 0 8px 0;">Latvian paragraph.</p>
+  <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Avots</a></p>
 </div>
-
-RULES:
-
-1. 🌍 World news → 3–5 items
-2. 🇱🇻 Latvijas jaunumi → 1–3 items (or 1 short sentence if none)
-3. EACH item:
-   - MUST be inside <div style="margin-bottom:20px;">
-   - MUST NOT merge multiple items into one paragraph
-4. World news:
-   - English paragraph FIRST
-   - Latvian paragraph SECOND
-5. Latvian section:
-   - Latvian only
-6. Keep tone concise and factual
-7. Use ONLY provided items
 
 WORLD NEWS INPUT:
 {format_items(world_items)}
@@ -68,4 +85,7 @@ LATVIA NEWS INPUT:
         input=prompt
     )
 
-    return response.output_text
+    if hasattr(response, "output_text") and response.output_text:
+        return response.output_text
+
+    raise RuntimeError(f"OpenAI response did not include output_text: {response}")
