@@ -41,3 +41,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+if len(world_items) < 2:
+    html_body = """
+    <h2>AI in Education Daily Brief</h2>
+    <p><strong>No sufficient new items today.</strong> Not enough high-quality new AI in education news was found in the last run. Avots: <a href="https://news.google.com/">Google News</a></p>
+    """
+else:
+    html_body = summarize_news(world_items[:5], latvia_items[:3])
