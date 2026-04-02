@@ -3,7 +3,11 @@ from openai import OpenAI
 
 
 def summarize_sample_news() -> str:
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("Missing OPENAI_API_KEY")
+
+    client = OpenAI(api_key=api_key)
 
     prompt = """
 You generate a daily email briefing about artificial intelligence in education.
@@ -47,4 +51,7 @@ LATVIA:
         input=prompt
     )
 
-    return response.output_text
+    if hasattr(response, "output_text") and response.output_text:
+        return response.output_text
+
+    raise RuntimeError(f"OpenAI response did not include output_text: {response}")
