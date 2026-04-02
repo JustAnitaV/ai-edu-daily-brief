@@ -1,18 +1,12 @@
+from summarize import summarize_sample_news
 from send_email import send_email
 
 
 def main():
-    subject = "Test email from AI Education Daily Brief"
-    html_body = """
-    <html>
-      <body>
-        <h2>Test email</h2>
-        <p>This is a test email from your GitHub Actions workflow.</p>
-      </body>
-    </html>
-    """
+    html_body = summarize_sample_news()
+    subject = "AI in Education Daily Brief - Test OpenAI Version"
     send_email(subject, html_body)
-    print("Test email sent successfully.")
+    print("OpenAI-generated email sent successfully.")
 
 
 if __name__ == "__main__":
