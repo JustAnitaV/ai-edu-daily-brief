@@ -56,7 +56,7 @@ RULES:
 - Be precise about what happened and why it matters for education.
 
 2. KEY HIGHLIGHTS
-- Add 3 short bullet points in English only.
+- Add 3 short bullet points in English block first and Latvian block second.
 - Each bullet should summarize a broader takeaway from today’s news, not repeat full headlines.
 - Examples of useful angles: policy direction, classroom adoption, teacher workload, higher education strategy, governance risk.
 
