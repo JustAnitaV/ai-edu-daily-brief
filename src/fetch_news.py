@@ -59,8 +59,9 @@ def fetch_news() -> dict:
     ]
 
     latvia_sources = [
-        ("Google News Latvia: AI education", google_news_rss("mākslīgais intelekts izglītībā Latvija", "lv", "LV")),
-        ("Google News Latvia: education technology Latvia", google_news_rss("izglītības tehnoloģijas Latvija", "lv", "LV")),
+        ("Google News Latvia: AI in education", google_news_rss("mākslīgais intelekts izglītībā Latvijā", "lv", "LV")),
+        ("Google News Latvia: education technology Latvia", google_news_rss("izglītības tehnoloģijas Latvijā", "lv", "LV")),
+        ("Google News Latvia: AI in schools Latvia", google_news_rss("MI skolās", "lv", "LV")),
     ]
 
     world = []
