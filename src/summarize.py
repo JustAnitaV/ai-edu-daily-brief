@@ -54,6 +54,7 @@ RULES:
   - a short tag line at the end
 - Make this summary more developed: 2–3 sentences in each language paragraph.
 - Be precise about what happened and why it matters for education.
+- State the country / location of this item
 
 2. KEY HIGHLIGHTS
 - Add 3 short bullet points in English block first and Latvian block second.
@@ -66,7 +67,9 @@ RULES:
 - For each item:
   - English block first
   - Latvian block second
+  - State the country / location of this item
 - Each paragraph should be more developed than before: usually 2 sentences, sometimes 3 if needed.
+
 
 4. WORLD NEWS
 - Include 2–4 items if available.
@@ -74,7 +77,10 @@ RULES:
 - For each item:
   - English block first
   - Latvian block second
+  - State the country / location of this item
 - Each paragraph should explain the development more precisely and make the subject clear.
+
+
 
 5. LATVIJAS JAUNUMI
 - Include 1–3 items if available.
