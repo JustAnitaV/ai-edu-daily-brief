@@ -16,9 +16,6 @@ def fetch_feed(url: str, source_name: str) -> list[dict]:
 
     feed = feedparser.parse(response.content)
 
-    if feed.bozo:
-        print(f"Warning: feed parsing issue for {source_name}: {feed.bozo_exception}")
-
     items = []
     for entry in feed.entries:
         title = entry.get("title", "").strip()
@@ -46,22 +43,50 @@ def google_news_rss(query: str, lang: str = "en", country: str = "US") -> str:
 
 
 def fetch_news() -> dict:
+    # ===== WORLD (K-12 + LLM focus) =====
+    world_queries = [
+        "generative AI K-12 education",
+        "LLM classroom school students AI learning",
+        "AI homework school students generative AI",
+        "AI tutoring school students chatbot learning",
+        "AI literacy schools generative AI",
+        "AI assessment school generative AI grading",
+        "AI cheating school policy generative AI",
+        "AI teachers lesson planning generative AI classroom"
+    ]
+
     world_sources = [
-        ("Google News World: AI in education", google_news_rss("artificial intelligence in education", "en", "US")),
-        ("Google News World: generative AI schools", google_news_rss("generative AI schools education", "en", "US")),
-        ("Edutopia", "https://www.edutopia.org/rss.xml"),
+        (f"Google World: {q}", google_news_rss(q, "en", "US"))
+        for q in world_queries
+    ]
+
+    # ===== EUROPE =====
+    europe_queries = [
+        "generative AI schools Europe policy",
+        "AI education Europe schools guidelines AI",
+        "LLM classroom Europe school education",
+        "AI teaching Europe schools generative AI",
+        "AI assessment schools Europe policy",
     ]
 
     europe_sources = [
-        ("Google News Europe: AI in education", google_news_rss("artificial intelligence in education Europe", "en", "GB")),
-        ("Google News Europe: generative AI schools Europe", google_news_rss("generative AI schools Europe education", "en", "GB")),
-        ("Google News Europe: universities AI teaching Europe", google_news_rss("universities AI teaching Europe", "en", "GB")),
+        (f"Google Europe: {q}", google_news_rss(q, "en", "GB"))
+        for q in europe_queries
+    ]
+
+    # ===== LATVIA =====
+    latvia_queries = [
+        "mākslīgais intelekts skolās Latvijā",
+        "MI izglītībā Latvijā skolas",
+        "ģeneratīvais MI skolēniem Latvijā",
+        "izglītības tehnoloģijas Latvijā MI",
+        "mākslīgais intelekts mācībās Latvija",
+        "MI vadlīnijas izglītībā Latvijā",
     ]
 
     latvia_sources = [
-        ("Google News Latvia: AI in education", google_news_rss("mākslīgais intelekts izglītībā Latvijā", "lv", "LV")),
-        ("Google News Latvia: education technology Latvia", google_news_rss("izglītības tehnoloģijas Latvijā", "lv", "LV")),
-        ("Google News Latvia: AI in schools Latvia", google_news_rss("MI skolās", "lv", "LV")),
+        (f"Google Latvia: {q}", google_news_rss(q, "lv", "LV"))
+        for q in latvia_queries
     ]
 
     world = []
@@ -69,21 +94,21 @@ def fetch_news() -> dict:
         try:
             world.extend(fetch_feed(url, source_name))
         except Exception as e:
-            print(f"Warning: failed to fetch world source {source_name}: {e}")
+            print(f"Warning: failed world source {source_name}: {e}")
 
     europe = []
     for source_name, url in europe_sources:
         try:
             europe.extend(fetch_feed(url, source_name))
         except Exception as e:
-            print(f"Warning: failed to fetch Europe source {source_name}: {e}")
+            print(f"Warning: failed Europe source {source_name}: {e}")
 
     latvia = []
     for source_name, url in latvia_sources:
         try:
             latvia.extend(fetch_feed(url, source_name))
         except Exception as e:
-            print(f"Warning: failed to fetch Latvia source {source_name}: {e}")
+            print(f"Warning: failed Latvia source {source_name}: {e}")
 
     print(f"Total world items: {len(world)}")
     print(f"Total Europe items: {len(europe)}")
