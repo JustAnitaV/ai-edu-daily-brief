@@ -74,11 +74,11 @@ def build_seen_set(history):
     return seen
 
 
-def filter_and_dedupe(items, history, seen, limit=5):
+def filter_and_dedupe(items, history, seen, limit=5, recent_hours=RECENT_HOURS):
     new_items = []
 
     for item in items:
-        if not is_recent(item.get("published")):
+        if not is_recent(item.get("published"), hours=recent_hours):
             continue
 
         url, title = make_item_keys(item)
