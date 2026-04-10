@@ -11,9 +11,20 @@ def main():
     try:
         news = fetch_news()
 
-        world_items, history = filter_and_dedupe(news["world"])
-        europe_items, _ = filter_and_dedupe(news["europe"])
-        latvia_items, _ = filter_and_dedupe(news["latvia"])
+        from filter_and_dedupe import (
+            filter_and_dedupe,
+            update_history,
+            load_history,
+            build_seen_set,
+        )
+
+        history = load_history()
+        seen = build_seen_set(history)
+
+        world_items = filter_and_dedupe(news["world"], history, seen, limit=5)
+        europe_items = filter_and_dedupe(news["europe"], history, seen, limit=5)
+        latvia_items = filter_and_dedupe(news["latvia"], history, seen, limit=5)
+
 
         print(f"World items after dedupe: {len(world_items)}")
         print(f"Europe items after dedupe: {len(europe_items)}")
