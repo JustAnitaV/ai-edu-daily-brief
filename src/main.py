@@ -112,7 +112,7 @@ def main():
 
         html_body = wrap_email(content)
 
-        subject = f"AI in Education Daily Brief - {datetime.utcnow().date()}"
+        subject = build_subject(world_items, europe_items, latvia_items)
         send_email(subject, html_body)
 
         update_history(world_items[:4] + europe_items[:4] + latvia_items[:3], history)
