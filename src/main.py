@@ -12,16 +12,46 @@ from send_email import send_email
 from build_email import wrap_email
 
 
+PRIMARY_HOURS = 48
+FALLBACK_HOURS = 168  # 7 days
+MIN_TOTAL_ITEMS = 5
+
+
+def collect_items(news, history, recent_hours):
+    seen = build_seen_set(history)
+
+    world_items = filter_and_dedupe(
+        news["world"], history, seen, limit=5, recent_hours=recent_hours
+    )
+    europe_items = filter_and_dedupe(
+        news["europe"], history, seen, limit=5, recent_hours=recent_hours
+    )
+    latvia_items = filter_and_dedupe(
+        news["latvia"], history, seen, limit=5, recent_hours=recent_hours
+    )
+
+    return world_items, europe_items, latvia_items
+
+
 def main():
     try:
         news = fetch_news()
-
         history = load_history()
-        seen = build_seen_set(history)
 
-        world_items = filter_and_dedupe(news["world"], history, seen, limit=5)
-        europe_items = filter_and_dedupe(news["europe"], history, seen, limit=5)
-        latvia_items = filter_and_dedupe(news["latvia"], history, seen, limit=5)
+        world_items, europe_items, latvia_items = collect_items(
+            news, history, PRIMARY_HOURS
+        )
+
+        total_items = len(world_items) + len(europe_items) + len(latvia_items)
+        print(f"Items with {PRIMARY_HOURS}h window: {total_items}")
+
+        if total_items < MIN_TOTAL_ITEMS:
+            print(
+                f"Too few items in {PRIMARY_HOURS}h window, retrying with {FALLBACK_HOURS}h window."
+            )
+            world_items, europe_items, latvia_items = collect_items(
+                news, history, FALLBACK_HOURS
+            )
 
         print(f"World items after dedupe: {len(world_items)}")
         print(f"Europe items after dedupe: {len(europe_items)}")
