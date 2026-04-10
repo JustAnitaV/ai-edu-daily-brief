@@ -16,6 +16,47 @@ PRIMARY_HOURS = 48
 FALLBACK_HOURS = 168  # 7 days
 MIN_TOTAL_ITEMS = 5
 
+def build_subject(world_items, europe_items, latvia_items):
+    all_items = world_items + europe_items + latvia_items
+    count = len(all_items)
+
+    # --- base ---
+    if count == 0:
+        base = "No updates"
+    elif count <= 3:
+        base = "Light day"
+    elif count <= 6:
+        base = f"{count} updates"
+    else:
+        base = f"Heavy day ({count} updates)"
+
+    # --- tag detection ---
+    titles = " ".join([i["title"].lower() for i in all_items])
+
+    tags = []
+
+    # Latvia
+    if latvia_items:
+        tags.append("🇱🇻 Latvia")
+
+    # LLM / generative AI
+    if any(x in titles for x in ["llm", "generative ai", "chatgpt", "gpt", "ai tutor"]):
+        tags.append("LLM")
+
+    # Policy
+    if any(x in titles for x in ["policy", "guidelines", "ministry", "regulation"]):
+        tags.append("Policy")
+
+    # Schools / K-12
+    if any(x in titles for x in ["school", "k-12", "classroom", "students"]):
+        tags.append("Schools")
+
+    # max 2–3 tags
+    tags = tags[:3]
+
+    tag_part = f" · {' · '.join(tags)}" if tags else ""
+
+    return f"AI in Education — {base}{tag_part}"
 
 def collect_items(news, history, recent_hours):
     seen = build_seen_set(history)
