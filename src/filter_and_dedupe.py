@@ -74,8 +74,112 @@ def build_seen_set(history):
     return seen
 
 
+def contains_any(text, keywords):
+    return any(keyword in text for keyword in keywords)
+
+
+def score_item(item):
+    title = normalize_title(item.get("title", ""))
+    source = (item.get("source") or "").lower()
+
+    score = 0
+
+    # --- Primary relevance: school-age / K-12 / classroom / students ---
+    if contains_any(title, [
+        "k-12", "school", "schools", "classroom", "classrooms",
+        "student", "students", "pupil", "pupils", "secondary school",
+        "primary school", "high school", "teacher", "teachers"
+    ]):
+        score += 4
+
+    # --- LLM / generative AI focus ---
+    if contains_any(title, [
+        "llm", "large language model", "large language models",
+        "generative ai", "genai", "chatgpt", "gpt", "chatbot",
+        "copilot", "ai tutor", "tutor"
+    ]):
+        score += 4
+
+    # --- Student learning priority ---
+    if contains_any(title, [
+        "learning", "homework", "study", "tutoring", "literacy",
+        "reading", "writing", "feedback", "personalized learning",
+        "instruction"
+    ]):
+        score += 4
+
+    # --- Teacher workflow / assessment ---
+    if contains_any(title, [
+        "lesson planning", "lesson plan", "teacher workflow",
+        "assessment", "grading", "feedback", "curriculum",
+        "instructional", "classroom practice"
+    ]):
+        score += 3
+
+    # --- Integrity / exams / evaluation ---
+    if contains_any(title, [
+        "academic integrity", "cheating", "exam", "exams",
+        "testing", "evaluation", "plagiarism"
+    ]):
+        score += 3
+
+    # --- Policy / system / guidance ---
+    if contains_any(title, [
+        "policy", "guidance", "guidelines", "ministry",
+        "government", "regulation", "framework", "safety",
+        "privacy", "governance"
+    ]):
+        score += 3
+
+    # --- Latvia / Europe signals ---
+    if contains_any(title, ["latvia", "latvija"]):
+        score += 3
+    if contains_any(title, ["europe", "european", "eu"]):
+        score += 1
+
+    # --- Better sources / slight boost ---
+    if contains_any(source, ["edutopia", "edsurge"]):
+        score += 1
+
+    # --- Penalties: noisy or low-value framing ---
+    if contains_any(title, [
+        "opinion", "commentary", "editorial", "podcast"
+    ]):
+        score -= 3
+
+    if contains_any(title, [
+        "launches", "launch", "unveils", "introduces", "announces"
+    ]):
+        score -= 1
+
+    # Higher-ed only penalty if no school signal
+    higher_ed_only = contains_any(title, [
+        "university", "universities", "college", "higher education"
+    ])
+    school_signal = contains_any(title, [
+        "school", "schools", "k-12", "classroom", "student", "students",
+        "teacher", "teachers", "primary school", "secondary school", "high school"
+    ])
+    if higher_ed_only and not school_signal:
+        score -= 3
+
+    # Generic wording penalty
+    if contains_any(title, [
+        "transforming education", "future of education", "ai in education"
+    ]):
+        score -= 2
+
+    return score
+
+
+def sort_key(item):
+    pub_dt = parse_pub_date(item.get("published"))
+    timestamp = pub_dt.timestamp() if pub_dt else 0
+    return (item.get("score", 0), timestamp)
+
+
 def filter_and_dedupe(items, history, seen, limit=5, recent_hours=RECENT_HOURS):
-    new_items = []
+    candidates = []
 
     for item in items:
         if not is_recent(item.get("published"), hours=recent_hours):
@@ -88,17 +192,17 @@ def filter_and_dedupe(items, history, seen, limit=5, recent_hours=RECENT_HOURS):
         if title and ("title", title) in seen:
             continue
 
-        new_items.append(item)
+        item_copy = dict(item)
+        item_copy["score"] = score_item(item_copy)
+        candidates.append(item_copy)
 
         if url:
             seen.add(("url", url))
         if title:
             seen.add(("title", title))
 
-        if len(new_items) >= limit:
-            break
-
-    return new_items
+    candidates.sort(key=sort_key, reverse=True)
+    return candidates[:limit]
 
 
 def prune_history(history, retention_days=HISTORY_RETENTION_DAYS):
@@ -129,6 +233,7 @@ def update_history(selected_items, history):
             "url": item.get("url", ""),
             "published": item.get("published", ""),
             "source": item.get("source", ""),
+            "score": item.get("score", 0),
             "sent_at": now_iso
         })
 
