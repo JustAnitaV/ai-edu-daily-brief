@@ -9,19 +9,52 @@ def summarize_news(world_items, europe_items, latvia_items):
         if not items:
             return "None"
         return "\n".join(
-            [f"- {i['title']} | {i['url']} | {i.get('source', 'Unknown source')}" for i in items]
+            [
+                f"- Title: {i['title']} | URL: {i['url']} | Source: {i.get('source', 'Unknown source')} | Published: {i.get('published', '')}"
+                for i in items
+            ]
         )
 
     prompt = f"""
-You generate a premium daily intelligence brief about artificial intelligence in education.
+You generate a curated daily intelligence brief about artificial intelligence in education.
 
-Return clean HTML only. Do not use markdown. Do not wrap output in code fences.
+Return clean HTML only.
+Do not use markdown.
+Do not wrap output in code fences.
 
-STYLE GOAL:
-The output should feel like a premium analyst newsletter: clear, structured, precise, concise but substantive.
-Summaries should be slightly more detailed than before and explain the significance of each development more clearly.
+EDITORIAL PRIORITIES:
+This brief is primarily for tracking AI in school-age education (roughly ages 7-18, K-12, primary, lower secondary, upper secondary).
+The strongest priority is student learning.
+The second priority is teacher work.
+The third priority is system-level developments such as policy, guidance, governance, implementation frameworks, and institutional recommendations.
+There is a special interest in LLMs, generative AI, and related classroom or school use cases.
+Higher education may appear only if it clearly signals a broader shift relevant to schools.
 
-STRICT OUTPUT STRUCTURE:
+SELECTION PRIORITIES:
+Prefer items that involve one or more of the following:
+- student learning, homework, tutoring, writing, reading, feedback, classroom use
+- teacher workflows, lesson planning, content generation, differentiation, assessment support
+- assessment, academic integrity, exams, homework redesign
+- policy, ministry guidance, school governance, safety, privacy, implementation rules
+- research findings or evidence about impact
+- concrete school or system implementation examples
+- clear incidents, failures, restrictions, or cautionary lessons
+
+DE-PRIORITIZE:
+- generic trend language without a concrete development
+- broad AI commentary without a real education link
+- higher education items that do not have relevance for school education
+- pure PR language without a meaningful implication
+
+ANALYTICAL RULES:
+- Use only the provided items.
+- Do not invent facts, dates, locations, institutions, or outcomes.
+- You may make careful, limited inferences about significance, but only if they are clearly supported by the item title/source context.
+- Do not overstate certainty.
+- Be concrete and specific.
+- Avoid vague phrases such as "important development" unless you immediately explain why.
+
+OUTPUT STRUCTURE:
 
 <h2 style="margin-top:30px;">🔥 Top story</h2>
 <div style="margin-bottom:25px; padding:16px; background-color:#f8fafc; border:1px solid #e5e7eb; border-radius:8px;">
@@ -44,86 +77,103 @@ STRICT OUTPUT STRUCTURE:
 <h2 style="margin-top:30px;">🇱🇻 Latvijas jaunumi</h2>
 ... items ...
 
-RULES:
-
-1. TOP STORY
-- Choose the single most important item from EUROPE or WORLD input.
-- Write it as a featured item with:
+TOP STORY RULES:
+- Choose the single strongest item from EUROPE or WORLD.
+- Prioritize in this order:
+  1. school-age/K-12 relevance
+  2. direct implications for student learning
+  3. LLM/generative AI relevance
+  4. implications for teacher work
+  5. policy/system relevance
+  6. only then broader education relevance
+- The featured item must include:
   - one English block
   - one Latvian block
-  - a short tag line at the end
-- Make this summary more developed: 2–3 sentences in each language paragraph.
-- Be precise about what happened and why it matters for education.
-- State the country / location of this item
+  - one short closing line: "Why this matters"
+- Each language block should be 2-3 sentences.
+- State the country or location if it is evident from the item.
+- Explain what happened and why it matters, especially for learners, teachers, or education systems.
 
-2. KEY HIGHLIGHTS
-- Add 3 short bullet points in English block first and Latvian block second.
-- Each bullet should summarize a broader takeaway from today’s news, not repeat full headlines.
-- Examples of useful angles: policy direction, classroom adoption, teacher workload, higher education strategy, governance risk.
+KEY HIGHLIGHTS RULES:
+- Write exactly 3 bullet points.
+- Bullet 1 should focus on learner impact or classroom learning patterns.
+- Bullet 2 should focus on teacher workflow / assessment / homework / academic integrity.
+- Bullet 3 should focus on system-level implications, policy, or signals relevant for Latvia.
+- Keep them analytical and concise.
+- Do not repeat headlines word-for-word.
 
-3. EUROPE NEWS
-- Include 2–4 items if available.
-- Focus on European institutions, schools, universities, policy, edtech, implementation.
+EUROPE NEWS RULES:
+- Include 2-4 items if available.
+- Prefer school education, LLM use, guidance, implementation, assessment, and evidence.
 - For each item:
   - English block first
   - Latvian block second
-  - State the country / location of this item
-- Each paragraph should be more developed than before: usually 2 sentences, sometimes 3 if needed.
+  - mention location if evident
+  - usually 2 sentences per language block
+- Avoid generic summary language.
 
-
-4. WORLD NEWS
-- Include 2–4 items if available.
-- Avoid overfilling with US-only items if Europe already has enough material.
+WORLD NEWS RULES:
+- Include 2-4 items if available.
+- Prefer concrete developments relevant to school education.
+- Include higher education only if it clearly signals a school-relevant shift.
 - For each item:
   - English block first
   - Latvian block second
-  - State the country / location of this item
-- Each paragraph should explain the development more precisely and make the subject clear.
+  - mention location if evident
+  - usually 2 sentences per language block
 
+LATVIJAS JAUNUMI RULES:
+- Include 1-3 items if available.
+- Write only in excellent Latvian.
+- For Latvia, you may include broader education ecosystem signals if they are clearly relevant to AI in education:
+  - schools
+  - ministries / agencies
+  - pilot projects
+  - guidance
+  - professional discussions
+  - implementation signals
+- If there are no Latvia-specific items, write one short Latvian sentence saying that no meaningful Latvia-specific items were found today.
 
-
-5. LATVIJAS JAUNUMI
-- Include 1–3 items if available.
-- Write only in excellent natural Latvian.
-- If there are no Latvia items, write one short Latvian sentence saying that no new Latvia-specific items were found today.
-
-6. EACH ITEM MUST USE THIS EXACT CONTAINER:
-
-<div style="margin-bottom:25px; padding-bottom:15px; border-bottom:1px solid #eee;">
-  ...
-</div>
-
-7. FOR EUROPE/WORLD ITEMS USE THIS HTML STRUCTURE EXACTLY:
+FOR EUROPE/WORLD ITEMS USE THIS EXACT HTML STRUCTURE:
 
 <div style="margin-bottom:25px; padding-bottom:15px; border-bottom:1px solid #eee;">
   <p style="margin:0 0 8px 0;"><strong>English theme sentence.</strong></p>
-  <p style="margin:0 0 8px 0;">A more developed English summary of 2–3 sentences that explains the topic clearly and precisely.</p>
+  <p style="margin:0 0 8px 0;">A precise English summary in 2-3 sentences. It should say what happened and why it matters for learners, teachers, or systems.</p>
   <p style="margin:0 0 8px 0; font-size:12px; color:#374151;"><strong>Tags:</strong> tag1 · tag2 · tag3</p>
   <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Source</a></p>
 
   <p style="margin:14px 0 8px 0;"><strong>Latvian theme sentence.</strong></p>
-  <p style="margin:0 0 8px 0;">Izvērstāks kopsavilkums latviešu valodā 2–3 teikumos, precīzi izskaidrojot tematu un nozīmi.</p>
+  <p style="margin:0 0 8px 0;">Precīzs kopsavilkums latviešu valodā 2-3 teikumos. Tajā skaidri pasaki, kas noticis un kāpēc tas ir svarīgi skolēniem, skolotājiem vai sistēmai.</p>
   <p style="margin:0 0 8px 0; font-size:12px; color:#374151;"><strong>Tēmas:</strong> tēma1 · tēma2 · tēma3</p>
   <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Avots</a></p>
 </div>
 
-8. FOR LATVIA ITEMS USE THIS HTML STRUCTURE EXACTLY:
+FOR LATVIA ITEMS USE THIS EXACT HTML STRUCTURE:
 
 <div style="margin-bottom:25px; padding-bottom:15px; border-bottom:1px solid #eee;">
   <p style="margin:0 0 8px 0;"><strong>Latvian theme sentence.</strong></p>
-  <p style="margin:0 0 8px 0;">Izvērstāks kopsavilkums latviešu valodā 2–3 teikumos, skaidri atklājot, kas noticis un kāpēc tas ir nozīmīgi.</p>
+  <p style="margin:0 0 8px 0;">Izvērstāks un precīzs kopsavilkums latviešu valodā 2-3 teikumos, skaidri pasakot, kas noticis un kāpēc tas ir svarīgi Latvijas izglītības ekosistēmai.</p>
   <p style="margin:0 0 8px 0; font-size:12px; color:#374151;"><strong>Tēmas:</strong> tēma1 · tēma2 · tēma3</p>
   <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Avots</a></p>
 </div>
 
-9. IMPORTANT
-- Do NOT merge multiple items into one paragraph.
-- Do NOT invent facts, dates, institutions, or claims.
-- Use ONLY the provided items.
-- Keep tone professional, factual, analytical.
-- Avoid vague wording like "interesting development" unless you specify what the development is.
-- Theme sentences should be specific and informative, not generic.
-- Tags should be short topical labels such as: policy, higher education, teacher training, classroom tools, assessment, governance, edtech, literacy, implementation.
+TOP STORY HTML REQUIREMENTS:
+Use this exact structure inside the featured box:
+<p style="margin:0 0 8px 0;"><strong>English theme sentence.</strong></p>
+<p style="margin:0 0 10px 0;">2-3 sentence English explanation.</p>
+<p style="margin:0 0 14px 0; font-size:12px; color:#374151;"><strong>Tags:</strong> tag1 · tag2 · tag3</p>
+<p style="margin:0 0 8px 0;"><strong>Latvian theme sentence.</strong></p>
+<p style="margin:0 0 10px 0;">2-3 sentence Latvian explanation.</p>
+<p style="margin:0 0 14px 0; font-size:12px; color:#374151;"><strong>Tēmas:</strong> tēma1 · tēma2 · tēma3</p>
+<p style="margin:0; font-size:13px; color:#111827;"><strong>Why this matters:</strong> One concise sentence in English.</p>
+<p style="margin:6px 0 0 0; font-size:12px; color:#666;">Avots: <a href="URL">Source</a></p>
+
+IMPORTANT:
+- Do not merge multiple items into one paragraph.
+- Do not duplicate the same item in multiple sections.
+- Keep the tone analytical, restrained, and useful.
+- Tags should be short and specific, for example:
+  learning · homework · assessment · teacher workflow · policy · governance · safety · K-12 · schools · LLM · generative AI · exams · integrity · pilot · guidance
 
 EUROPE NEWS INPUT:
 {format_items(europe_items)}
