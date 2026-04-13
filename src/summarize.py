@@ -177,6 +177,14 @@ IMPORTANT:
 - Tags should be short and specific, for example:
   learning · homework · assessment · teacher workflow · policy · governance · safety · K-12 · schools · LLM · generative AI · exams · integrity · pilot · guidance
 
+CORRECT TRANSLATIONS:
+- In Latvian use correct terminology
+- Remember: 
+    - AI (artificial intelligence) = MI (mākslīgais intelekts)
+    - Generative AI = Ģeneratīvais MI
+    - LLM (large language model) = LVM (lielais valodu modelis)
+    - chatbot = sarunbots vai čatbots
+
 EUROPE NEWS INPUT:
 {format_items(europe_items)}
 
