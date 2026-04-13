@@ -2,6 +2,14 @@ import feedparser
 import requests
 from urllib.parse import quote_plus, urlparse
 
+def resolve_google_news_url(url: str) -> str:
+    try:
+        if "news.google.com" in url:
+            response = requests.get(url, headers=HEADERS, timeout=5, allow_redirects=True)
+            return response.url
+        return url
+    except:
+        return url
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; AIEduDailyBrief/1.0)"
