@@ -101,6 +101,8 @@ KEY HIGHLIGHTS RULES:
 - Bullet 3 should focus on system-level implications, policy, or signals relevant for Latvia.
 - Keep them analytical and concise.
 - Do not repeat headlines word-for-word.
+- English block first.
+- Latvian block second.
 
 EUROPE NEWS RULES:
 - Include 2-4 items if available.
