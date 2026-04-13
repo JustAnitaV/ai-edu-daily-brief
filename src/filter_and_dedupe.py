@@ -49,10 +49,15 @@ def save_history(history):
         json.dump(history, f, indent=2, ensure_ascii=False)
 
 
-def normalize_title(text):
+def normalize_text(text):
     text = (text or "").lower().strip()
     text = re.sub(r"\s+", " ", text)
     text = text.replace("–", "-").replace("—", "-")
+    return text
+
+
+def normalize_title(text):
+    text = normalize_text(text)
     text = re.sub(r'\s*-\s*(edsurge|edutopia|google news|news)\s*$', "", text)
     return text
 
@@ -78,17 +83,138 @@ def contains_any(text, keywords):
     return any(keyword in text for keyword in keywords)
 
 
+def has_ai_signal(text):
+    text = normalize_text(text)
+    ai_keywords = [
+        "ai",
+        "artificial intelligence",
+        "machine learning",
+        "generative ai",
+        "genai",
+        "llm",
+        "large language model",
+        "large language models",
+        "chatgpt",
+        "gpt",
+        "openai",
+        "copilot",
+        "chatbot",
+        "ai tutor",
+        "mākslīgais intelekts",
+        "mi ",
+        " mi",
+        "ģeneratīvais mi",
+        "valodu model",
+        "lielais valodu modelis",
+        "lielie valodu modeļi",
+    ]
+    return contains_any(text, ai_keywords)
+
+
+def has_education_signal(text):
+    text = normalize_text(text)
+    education_keywords = [
+        "education",
+        "school",
+        "schools",
+        "classroom",
+        "classrooms",
+        "student",
+        "students",
+        "teacher",
+        "teachers",
+        "learning",
+        "teaching",
+        "lesson",
+        "homework",
+        "assessment",
+        "grading",
+        "exam",
+        "exams",
+        "curriculum",
+        "k-12",
+        "primary school",
+        "secondary school",
+        "high school",
+        "college",
+        "university",
+        "higher education",
+        "izglīt",
+        "skol",
+        "skolēn",
+        "skolot",
+        "mācīb",
+        "mācīšan",
+        "stunda",
+        "stundās",
+        "vērtēšan",
+        "eksāmen",
+        "mājasdar",
+        "klase",
+        "klasē",
+        "pedagog",
+        "kurikuls",
+    ]
+    return contains_any(text, education_keywords)
+
+
+def has_strong_k12_signal(text):
+    text = normalize_text(text)
+    k12_keywords = [
+        "k-12",
+        "school",
+        "schools",
+        "classroom",
+        "classrooms",
+        "student",
+        "students",
+        "teacher",
+        "teachers",
+        "primary school",
+        "secondary school",
+        "high school",
+        "skola",
+        "skolas",
+        "skolēn",
+        "skolot",
+        "klase",
+        "klasē",
+    ]
+    return contains_any(text, k12_keywords)
+
+
+def is_ai_education_relevant(item):
+    title = normalize_title(item.get("title", ""))
+    source = normalize_text(item.get("source", ""))
+
+    combined = f"{title} {source}"
+
+    ai_signal = has_ai_signal(combined)
+    education_signal = has_education_signal(combined)
+
+    if not ai_signal:
+        return False
+
+    if not education_signal:
+        return False
+
+    return True
+
+
 def score_item(item):
     title = normalize_title(item.get("title", ""))
     source = (item.get("source") or "").lower()
 
     score = 0
 
+    # Hard relevance already enforced before scoring
+
     # --- Primary relevance: school-age / K-12 / classroom / students ---
     if contains_any(title, [
         "k-12", "school", "schools", "classroom", "classrooms",
         "student", "students", "pupil", "pupils", "secondary school",
-        "primary school", "high school", "teacher", "teachers"
+        "primary school", "high school", "teacher", "teachers",
+        "skola", "skolas", "skolēn", "skolot", "klase", "klasē"
     ]):
         score += 4
 
@@ -96,7 +222,8 @@ def score_item(item):
     if contains_any(title, [
         "llm", "large language model", "large language models",
         "generative ai", "genai", "chatgpt", "gpt", "chatbot",
-        "copilot", "ai tutor", "tutor"
+        "copilot", "ai tutor", "tutor",
+        "mākslīgais intelekts", "ģeneratīvais mi", "lielie valodu modeļi"
     ]):
         score += 4
 
@@ -104,7 +231,7 @@ def score_item(item):
     if contains_any(title, [
         "learning", "homework", "study", "tutoring", "literacy",
         "reading", "writing", "feedback", "personalized learning",
-        "instruction"
+        "instruction", "mācīb", "mācīšan", "mājasdar", "lasīšan", "rakstīšan"
     ]):
         score += 4
 
@@ -112,14 +239,16 @@ def score_item(item):
     if contains_any(title, [
         "lesson planning", "lesson plan", "teacher workflow",
         "assessment", "grading", "feedback", "curriculum",
-        "instructional", "classroom practice"
+        "instructional", "classroom practice",
+        "vērtēšan", "stunda", "skolot", "atgriezeniskā saite"
     ]):
         score += 3
 
     # --- Integrity / exams / evaluation ---
     if contains_any(title, [
         "academic integrity", "cheating", "exam", "exams",
-        "testing", "evaluation", "plagiarism"
+        "testing", "evaluation", "plagiarism",
+        "godīg", "eksāmen", "plaģi"
     ]):
         score += 3
 
@@ -127,14 +256,19 @@ def score_item(item):
     if contains_any(title, [
         "policy", "guidance", "guidelines", "ministry",
         "government", "regulation", "framework", "safety",
-        "privacy", "governance"
+        "privacy", "governance",
+        "vadlīnij", "ieteikum", "ministr", "politika", "regul", "droš"
     ]):
         score += 3
+
+    # --- Strong K-12 bonus ---
+    if has_strong_k12_signal(title):
+        score += 2
 
     # --- Latvia / Europe signals ---
     if contains_any(title, ["latvia", "latvija"]):
         score += 3
-    if contains_any(title, ["europe", "european", "eu"]):
+    if contains_any(title, ["europe", "european", "eu", "eiropa", "eiropas"]):
         score += 1
 
     # --- Better sources / slight boost ---
@@ -156,10 +290,7 @@ def score_item(item):
     higher_ed_only = contains_any(title, [
         "university", "universities", "college", "higher education"
     ])
-    school_signal = contains_any(title, [
-        "school", "schools", "k-12", "classroom", "student", "students",
-        "teacher", "teachers", "primary school", "secondary school", "high school"
-    ])
+    school_signal = has_strong_k12_signal(title)
     if higher_ed_only and not school_signal:
         score -= 3
 
@@ -183,6 +314,9 @@ def filter_and_dedupe(items, history, seen, limit=5, recent_hours=RECENT_HOURS):
 
     for item in items:
         if not is_recent(item.get("published"), hours=recent_hours):
+            continue
+
+        if not is_ai_education_relevant(item):
             continue
 
         url, title = make_item_keys(item)
