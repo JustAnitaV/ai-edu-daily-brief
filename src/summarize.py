@@ -27,7 +27,7 @@ This brief is primarily for tracking AI in school-age education (roughly ages 7-
 The strongest priority is student learning.
 The second priority is teacher work.
 The third priority is system-level developments such as policy, guidance, governance, implementation frameworks, and institutional recommendations.
-There is a special interest in LLMs, generative AI, and related classroom or school use cases.
+There is a special interest in LLMs, chatbots, generative AI and related classroom or school use cases.
 Higher education may appear only if it clearly signals a broader shift relevant to schools.
 
 SELECTION PRIORITIES:
