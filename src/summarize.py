@@ -10,7 +10,7 @@ def summarize_news(world_items, europe_items, latvia_items):
             return "None"
         return "\n".join(
             [
-                f"- Title: {i['title']} | URL: {i['url']} | Source: {i.get('source', 'Unknown')} | Published: {i.get('published', '')}"
+                f"- Title: {i['title']} | URL: {i['url']} | Source: {i.get('source_display', i.get('source', 'Unknown source'))} | Domain: {i.get('domain', '')} | Published: {i.get('published', '')}"
                 for i in items
             ]
         )
@@ -147,7 +147,7 @@ FOR EUROPE/WORLD ITEMS USE THIS EXACT HTML STRUCTURE:
   <p style="margin:14px 0 8px 0;"><strong>Latvian theme sentence.</strong></p>
   <p style="margin:0 0 8px 0;">Precīzs kopsavilkums latviešu valodā 2-3 teikumos. Tajā skaidri pasaki, kas noticis un kāpēc tas ir svarīgi skolēniem, skolotājiem vai sistēmai.</p>
   <p style="margin:0 0 8px 0; font-size:12px; color:#374151;"><strong>Tēmas:</strong> tēma1 · tēma2 · tēma3</p>
-  <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Avots</a></p>
+  <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Source name</a></p>
 </div>
 
 FOR LATVIA ITEMS USE THIS EXACT HTML STRUCTURE:
@@ -156,7 +156,7 @@ FOR LATVIA ITEMS USE THIS EXACT HTML STRUCTURE:
   <p style="margin:0 0 8px 0;"><strong>Latvian theme sentence.</strong></p>
   <p style="margin:0 0 8px 0;">Izvērstāks un precīzs kopsavilkums latviešu valodā 2-3 teikumos, skaidri pasakot, kas noticis un kāpēc tas ir svarīgi Latvijas izglītības ekosistēmai.</p>
   <p style="margin:0 0 8px 0; font-size:12px; color:#374151;"><strong>Tēmas:</strong> tēma1 · tēma2 · tēma3</p>
-  <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Avots</a></p>
+  <p style="margin:0; font-size:12px; color:#666;">Avots: <a href="URL">Source name</a></p>
 </div>
 
 TOP STORY HTML REQUIREMENTS:
@@ -168,13 +168,13 @@ Use this exact structure inside the featured box:
 <p style="margin:0 0 10px 0;">2-3 sentence Latvian explanation.</p>
 <p style="margin:0 0 14px 0; font-size:12px; color:#374151;"><strong>Tēmas:</strong> tēma1 · tēma2 · tēma3</p>
 <p style="margin:0; font-size:13px; color:#111827;"><strong>Why this matters:</strong> One concise sentence in English.</p>
-<p style="margin:6px 0 0 0; font-size:12px; color:#666;">Avots: <a href="URL">Source</a></p>
+<p style="margin:6px 0 0 0; font-size:12px; color:#666;">Avots: <a href="URL">Source name</a></p>
 
 IMPORTANT:
 - Do not merge multiple items into one paragraph.
 - Do not duplicate the same item in multiple sections.
 - Keep the tone analytical, restrained, and useful.
-- Always use the provided Source field as the visible name in the "Avots" link. Do not write generic labels like "Source".
+- Always use the provided Source field as the visible text in the "Avots" link. Never use generic labels like "Source".
 - Tags should be short and specific, for example:
   learning · homework · assessment · teacher workflow · policy · governance · safety · K-12 · schools · LLM · generative AI · exams · integrity · pilot · guidance
 
