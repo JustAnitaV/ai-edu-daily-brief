@@ -109,7 +109,8 @@ def fetch_feed(url: str, source_name: str) -> list[dict]:
     items = []
     for entry in feed.entries:
         title = entry.get("title", "").strip()
-        link = entry.get("link", "").strip()
+        raw_link = entry.get("link", "").strip()
+        link = resolve_google_news_url(raw_link)
         published = entry.get("published", "").strip()
 
         if title and link:
