@@ -5,10 +5,23 @@ from urllib.parse import quote_plus, urlparse
 def resolve_google_news_url(url: str) -> str:
     try:
         if "news.google.com" in url:
-            response = requests.get(url, headers=HEADERS, timeout=5, allow_redirects=True)
-            return response.url
+            response = requests.get(
+                url,
+                headers=HEADERS,
+                timeout=10,
+                allow_redirects=True
+            )
+
+            final_url = response.url
+
+            # 👇 Šis ir kritiskais check
+            if final_url and "news.google.com" not in final_url:
+                return final_url
+
         return url
-    except:
+
+    except Exception as e:
+        print(f"URL resolve error: {e}")
         return url
 
 HEADERS = {
