@@ -98,6 +98,10 @@ def smart_source_name_from_url(url: str) -> tuple[str, str]:
     if not domain:
         return "Unknown source", ""
 
+    # Never display Google News as the article source
+    if domain == "news.google.com":
+        return "Unknown source", domain
+
     if domain in SOURCE_NAME_MAP:
         return SOURCE_NAME_MAP[domain], domain
 
