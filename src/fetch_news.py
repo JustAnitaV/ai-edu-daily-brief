@@ -127,19 +127,45 @@ def fetch_feed(url: str, source_name: str) -> list[dict]:
     for entry in feed.entries:
         title = entry.get("title", "").strip()
         raw_link = entry.get("link", "").strip()
-        link = resolve_google_news_url(raw_link)
         published = entry.get("published", "").strip()
 
-        if title and link:
-            source_display, domain = smart_source_name_from_url(link)
-            items.append({
-                "title": title,
-                "url": link,
-                "published": published,
-                "source": source_name,
-                "source_display": source_display,
-                "domain": domain,
-            })
+        if not title or not raw_link:
+            continue
+
+        link = resolve_google_news_url(raw_link)
+        source_display, domain = smart_source_name_from_url(link)
+
+        # Fallback 1: try source from feed metadata
+        if source_display == "Unknown source":
+            entry_source = ""
+
+            if hasattr(entry, "source") and isinstance(entry.source, dict):
+                entry_source = entry.source.get("title", "").strip()
+
+            if not entry_source:
+                entry_source = entry.get("source", {}).get("title", "").strip() if isinstance(entry.get("source"), dict) else ""
+
+            if entry_source:
+                source_display = entry_source
+
+        # Fallback 2: if still unknown, use feed source name only as a last resort
+        if source_display == "Unknown source":
+            source_display = source_name
+
+        print("TITLE:", title)
+        print("RAW LINK:", raw_link)
+        print("FINAL LINK:", link)
+        print("SOURCE DISPLAY:", source_display)
+        print("DOMAIN:", domain)
+
+        items.append({
+            "title": title,
+            "url": link,
+            "published": published,
+            "source": source_name,
+            "source_display": source_display,
+            "domain": domain,
+        })
 
     print(f"Fetched {len(items)} items from {source_name}")
     return items
