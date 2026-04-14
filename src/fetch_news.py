@@ -114,6 +114,8 @@ def smart_source_name_from_url(url: str) -> tuple[str, str]:
 
     return prettify_domain_name(domain), domain
 
+    return prettify_domain_name(domain), domain
+
 
 def fetch_feed(url: str, source_name: str) -> list[dict]:
     print(f"Fetching: {source_name} -> {url}")
