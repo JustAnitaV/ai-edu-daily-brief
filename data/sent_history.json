@@ -1,29 +1,5 @@
 [
   {
-    "title": "Josh Tyrangiel book excerpt: How OpenAI and Khan Academy Made a Chatbot - The New York Times",
-    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZEZ1N2lTLXBXNlB2UVlRR2hLOFVnSVBTdkRlZHZsWkViX1JxMXQzTzBpZ3k0VDEtX19ucEdJYzFJY3RSX2NBWGFLZGJTQ3VtWVI2Vm4yUWFlNUgwb3NGRk13RWE0OWdtcEYtUVhnS3ZyeVV4N3laaHpSYW5KXzJFSHlzZ1pQYXhxaUNUeFZxRzZ1RTE2d2RFX0RvTQ?oc=5",
-    "published": "Sat, 16 May 2026 09:01:00 GMT",
-    "source": "Google World: AI tutoring school students chatbot learning",
-    "score": 4,
-    "sent_at": "2026-05-18T09:38:31.411196"
-  },
-  {
-    "title": "Nākotnes tehnoloģiju radītāji sākas ar bērnu interesi par zinātni - Latviesi.com",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNanNuSWdObkFUU3l5dnBwWnc1eDNDZFo5TlNUUUZ2Z2l6UWNKREhCbmt5XzlvN3dyWGE3MDhOalkzSDFsSGsyS0RNNWM0QjlmZzdqcmdwOXJ3ZzJsTTAzMmJ5MEJtTW5pc2M5enNkbGhKM3Bob0dud2Iwb3pDSlFzRTUtZFVtMzB1V0Q1WUMwRld6NFl3Tnlmc0V3NFNmdjM2bHlSS3NlOVFuZWQyUldTZA?oc=5",
-    "published": "Tue, 12 May 2026 14:28:54 GMT",
-    "source": "Google Latvia: izglītības tehnoloģijas Latvijā MI",
-    "score": 0,
-    "sent_at": "2026-05-18T09:38:31.411196"
-  },
-  {
-    "title": "\"Haips\" vai reāla vērtība – kā saprast, vai MI tiešām atmaksājas? - Dienas Bizness",
-    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSll0U3NmV3NvYjJtX3Baa0tlZ2lDendyMThKM2hWQWlOVmtlUjJTVDd0UTc3U1pnV0dnQmNPdUNJYVZCVlo2U0FHUHdoLURBRU52UGdubWJhZ3VpLWhUNG5IVUFQR0lVWlI3OENLN2lieDlldVdLUmJfX1JoT1l0b3NmcnBDb1dyMTBEbkszQ0tfb1do?oc=5",
-    "published": "Tue, 12 May 2026 05:52:16 GMT",
-    "source": "Google Latvia: MI izglītībā Latvijā skolas",
-    "score": 0,
-    "sent_at": "2026-05-18T09:38:31.411196"
-  },
-  {
     "title": "Mācību grāmatas jeb kāpēc bērni Latvijā nav vienlīdzīgi? - Dienas Bizness",
     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUnl2SmxoXzNfaEIzMlNlMWRjczFRRHg0SGdjaUlqY0NMLU5FRl9rbHdYZGNzWUtOTlFyVGRvLWFmYUFSOGxPazFOTWRzRFpMT01wYkw3V0xEQ1ZfbXZzSlUwSHBRc1ZrSjVlN3pJc1Y0UG9DU2ZIa0RlUmh4clN4Y3p6Ym9sSDhKa2wyVjIzQQ?oc=5",
     "published": "Tue, 19 May 2026 06:03:43 GMT",
@@ -606,5 +582,21 @@
     "source": "Google Latvia: mākslīgais intelekts mācībās Latvija",
     "score": 0,
     "sent_at": "2026-06-16T10:53:58.938565"
+  },
+  {
+    "title": "Pirms jaunā mācību gada Valmierā norisināsies izglītības konference “Bērns, kurš [ne]der skolai?!” - LV portāls",
+    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQX0kxQVQxMnhURW1aamJ5THd5X2FSeG1PNVhOQUxqQWl1dkF1TjNQTThLbXNEMkJLSEVIQ3VmNXA2MGU1cVNEdW15c1ZBNFlnUU9aQjZlN243bXNCY3p0RlF3MVBha0d6QzJtQVJyWHRVMjVWblU0OXFXUmJVUGhycW9xTHJzZHZRVGNyRlhTMzE3VThNQ0k3bmppaks5d0pfbDB1VEdrM1RVanoxMkh5LVFERWVIMDBVSnVuMGdzaFZmYUtkajctOEg3YmVPV19GLUdlVQ?oc=5",
+    "published": "Tue, 16 Jun 2026 14:53:55 GMT",
+    "source": "Google Latvia: MI izglītībā Latvijā skolas",
+    "score": 10,
+    "sent_at": "2026-06-17T10:25:05.826024"
+  },
+  {
+    "title": "LU un AS “Augstsprieguma tīkls” kopā attīstīs datu analītiku un MI risinājumus enerģētikā - LV portāls",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPY18za3NRdl8xS0xncTg1MjNPdkRJVkhLX1h4TlZrd0pmU1JTR0ZFRlcwM1pydGwyS3ZZd0tyLWJlMFNnQWhCUkJ6NVBkZTZocExaN3ZHcjN3aFMxalN6YndXZ2NyNzhfU3M1Tm5WNld2bXVkV0Ryc25hNjJTSkUtZktpLTNGZDM1REhoNGFpbHlSdnUyZHk2aWhGTjFkdG9MUWgwM2hlaUM0MHdkbHZrZTctZDFnQjJ1SkxRbVVsZ1l3LUJ1NEt6WkFSQU1GTkk?oc=5",
+    "published": "Tue, 16 Jun 2026 17:58:46 GMT",
+    "source": "Google Latvia: izglītības tehnoloģijas Latvijā MI",
+    "score": 0,
+    "sent_at": "2026-06-17T10:25:05.826024"
   }
 ]
