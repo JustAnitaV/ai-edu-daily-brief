@@ -1,13 +1,5 @@
 [
   {
-    "title": "Mācību grāmatas jeb kāpēc bērni Latvijā nav vienlīdzīgi? - Dienas Bizness",
-    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPUnl2SmxoXzNfaEIzMlNlMWRjczFRRHg0SGdjaUlqY0NMLU5FRl9rbHdYZGNzWUtOTlFyVGRvLWFmYUFSOGxPazFOTWRzRFpMT01wYkw3V0xEQ1ZfbXZzSlUwSHBRc1ZrSjVlN3pJc1Y0UG9DU2ZIa0RlUmh4clN4Y3p6Ym9sSDhKa2wyVjIzQQ?oc=5",
-    "published": "Tue, 19 May 2026 06:03:43 GMT",
-    "source": "Google Latvia: MI izglītībā Latvijā skolas",
-    "score": 4,
-    "sent_at": "2026-05-19T08:57:43.526691"
-  },
-  {
     "title": "More and More Teachers and Students Are Using AI – Even Though It Might Do More Harm Than Good - The Good Men Project",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOLXcxVVdoRE80bGFkQ0c5NTJfTWZFYlBYWGhHcWpUanhHVWN0S05qRHdLSGRNYVkxQ2hyQTFodXkyclVPLXVhS25NTWFia2dkbHY3RncxbkVkY01DZGx3SmhBUHFYR2gxSEhJZlBkVU5LNmpabzNRajVmd0JpandqTFlWZlh5b0xsV3NELW5kSVdSLWM3bnV6TFFQSUZBWVZkN2lyM2cxLWRaYk43a2k3UGQ2amVjQXNOODU3YW04ZHU1SUJLNlhLVFZaa2lrYjh3YXlr?oc=5",
     "published": "Wed, 20 May 2026 05:45:04 GMT",
@@ -598,5 +590,45 @@
     "source": "Google Latvia: izglītības tehnoloģijas Latvijā MI",
     "score": 0,
     "sent_at": "2026-06-17T10:25:05.826024"
+  },
+  {
+    "title": "No AI detectors, more citations. What's in a new Wake schools' AI policy draft - WRAL",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUW5hM2tHOVZDU1BCUkV0cFNwc0NRYzUyOHpaMExESmVfazRPVVF4MndZMkNiMDVBS1JFalhJR0xfTktOTnd0bEFnTFMwVVd2TlpyX0x4N0FudzhHS2tBX0tueFM0WDlvLVRQRVIxUjhkWW9rRlAyZGFNcHRaVENnN3VGQmkxXzRDRWIzSXdZRkR5Zw?oc=5",
+    "published": "Thu, 18 Jun 2026 00:25:33 GMT",
+    "source": "Google World: AI cheating school policy generative AI",
+    "score": 9,
+    "sent_at": "2026-06-18T10:04:28.835342"
+  },
+  {
+    "title": "Study: Giving Kids Access to AI Tutors Doesn’t Mean They’ll Use Them - The 74",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTkJXTXo3RFNLU05ZejZWOFVsaE13OVlNMjlROWpkdWM5YTRETWdnWUNGdjhsM01uSmRPQ20yNWYwMnNVMXhPY0w3QWdaNWRuTTdiWGFhbzBPcXJ6eDk2bmVaSDAwaXBBSVlyanRjYXNfQ2h5anpLU3pXNEFvSGU5NFB3aFRScjRHbERnN0NTUEVVdFkwdUo3M3JVUzBVbnEya1o5VjZ3?oc=5",
+    "published": "Wed, 17 Jun 2026 04:01:00 GMT",
+    "source": "Google World: AI tutoring school students chatbot learning",
+    "score": 8,
+    "sent_at": "2026-06-18T10:04:28.835342"
+  },
+  {
+    "title": "Powering Europe’s AI future: The fusion of compute and power - The Official Microsoft Blog",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcHJXTTNFcnZsVTgwdGlvZ1ZlUVA4ODg5VUZ3d1hxZE4xVXdWUGRrT1ZIS2g5TVk0Z0lJbDRKMDFueEk2Q192MTEtZWR3dDFEUlNMSXBXd3N4ZGJKVHVvZXBfMkpCRkduMktqVlNWWTVEaWNtQmdWYTlya3JScGFSOVF4b2ZlQXh0S0tyMEZ6UWhJMERnbktwRG1HaDIzNzBuYlJDbUpXZ0FsUmM?oc=5",
+    "published": "Wed, 17 Jun 2026 14:06:07 GMT",
+    "source": "Google Europe: AI assessment schools Europe policy",
+    "score": 1,
+    "sent_at": "2026-06-18T10:04:28.835342"
+  },
+  {
+    "title": "Generative KI und systemische Risiken unter dem DSA - Alexander von Humboldt Institut für Internet und Gesellschaft",
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPT2VpSE5rZUNZNF9UZk91ai1DaF9LcExyNTJqZTNfR0R4Vk1BZVNuWFluQUlEWWdLcUNSenlsMlYzcmdHbXZXeUx5MHdsY2pmN2pTV01ITko4S0hhRTFkQjVUUVF3TXhfcUJjTzM1RDR3X1B6eGJPMUJlUURkZXU1RFVYVWJQdw?oc=5",
+    "published": "Wed, 17 Jun 2026 13:45:45 GMT",
+    "source": "Google Europe: generative AI schools Europe policy",
+    "score": 0,
+    "sent_at": "2026-06-18T10:04:28.835342"
+  },
+  {
+    "title": "Pētījums: Latvijas uzņēmumos MI ieviešana norit diezgan gausi, atpaliekam arī no Lietuvas - Jauns.lv",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSFZma2JOQXJ6ZDd6MjRBN3VrWWFhdHZtWTVpS2VJbERBMlhSdlV0WmpiNjZhbGxiWWthVnppQjU1c1dKODJld19IM005cWg1T3FHQkV4LUhPUVU5N2dUVzBDYUtnRTAwN2lEbkV1RHN1NlpHUVhiSC1hbmlPWkJpWDNzMTVwQm1mMTh1TGZoaVh4em5DUFJHc3JBUGJfbU5Idjd1WmZ2NXdTZ0Zta0VrWG5lbjh1cVhRU2NFR0cyTll4VGE4?oc=5",
+    "published": "Thu, 18 Jun 2026 06:43:49 GMT",
+    "source": "Google Latvia: izglītības tehnoloģijas Latvijā MI",
+    "score": 3,
+    "sent_at": "2026-06-18T10:04:28.835342"
   }
 ]
