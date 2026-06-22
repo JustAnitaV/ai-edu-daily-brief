@@ -1,13 +1,5 @@
 [
   {
-    "title": "Ethics of Artificial Intelligence - AI - UNESCO",
-    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxbDNIRW1OSFYxemRrUHFSU0pJVHVGclQ2ajZySjRjQU40dWVYcUdFeXVIWUtCRjNHZXUwYWRDSmlNRHdTb0pTaWNkY2ZNTmxoejc4OFZsQXJfamZiNVp0bWs2VGVSUmRhNmg3WA?oc=5",
-    "published": "Thu, 21 May 2026 13:30:25 GMT",
-    "source": "Google Europe: AI assessment schools Europe policy",
-    "score": 0,
-    "sent_at": "2026-05-23T08:04:22.502932"
-  },
-  {
     "title": "Student Warns AI Is Ruining Education - Let's Data Science",
     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQzhfbVdRazNLU3dESS1USHVLdnhNeG9ScHl5MzVsT1VsOFk2MUcwTF9CUUdCTUt0WFNMWE1lbklYSTZxZ1RZdXZlczM5TTNBeW41Y1NST1pMUW9yZTc3ZVB2TEdEX2taNEFDbXE0TkRyR1FCWnhJRTBJXzZxY1NHSjh1T01XZw?oc=5",
     "published": "Sun, 24 May 2026 13:39:00 GMT",
@@ -654,5 +646,69 @@
     "source": "Google Latvia: mākslīgais intelekts mācībās Latvija",
     "score": 4,
     "sent_at": "2026-06-21T09:34:47.278043"
+  },
+  {
+    "title": "Study Links AI-assisted Homework To Lower Exam Scores - Dataconomy",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZ1A3dmpDNU1hblQ5X0ozeEZuLXBQY3U1X1g5WDRWMUhMVU9SQmZXMktfUnBIcDVVVzRSb1FYNmZSQmVGcDBUNkp3Z0Y5blBIV1pmMGp3UjlmVnlvUUgxdUttX1E3aEdCZ0dxRzEtZmxxR0ZPU1JBVTJ0WUlKbWdpNUhNb2dpNHdTUVZLeTNQQW9TZw?oc=5",
+    "published": "Mon, 22 Jun 2026 09:18:23 GMT",
+    "source": "Google World: AI homework school students generative AI",
+    "score": 7,
+    "sent_at": "2026-06-22T11:30:26.962316"
+  },
+  {
+    "title": "AI Grade Inflation Documented in 500,000 Grades: Homework Rises, Skills Do Not - Tech Times",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxObUlFbC1uOHZrTlJXbmRKNV83ZTF5ZmtLYWVXMlJaSlA5cC1TcUtIWkhMbnYybUtQXzFxRE9vYmdQSDRqbWUxYnhwdEk4VGtHbDZBUG1LNE1pSVV1UTVqdGo0aXBYLUgwcXkwUnZFWTI5VjhTZ0IxOW5iNFFXMzBpdGNFdk1tN1FNRTdzbWFNdlVqOVVZSGhEalBWTUg5SzVja2lTazBYaG9WU2YzZVFqTXBKeE9XdklERDBuUjdXVmxyalRfRlE?oc=5",
+    "published": "Mon, 22 Jun 2026 10:02:44 GMT",
+    "source": "Google World: AI assessment school generative AI grading",
+    "score": 4,
+    "sent_at": "2026-06-22T11:30:26.962316"
+  },
+  {
+    "title": "The AI Literacy Gap No One Expected - Campus Technology",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQ3cwdm5sTmZZdFZGa2lIZFNGdlJmYXdBRFdCNjhfZGhYZ0JoR0NybXJWeXpGd29wcGFmTG1UcjZxWjlzWkNKY01FaVVMX21yMk9WWURxMVUxYkVhUUt2WVllVGdqQk9HdmFYZ3dpTUF3OGxkbmNPbHVscjBSNkk0UEQ0bVIwTl9Gc2dfdFpFdTMybHM?oc=5",
+    "published": "Tue, 16 Jun 2026 14:29:57 GMT",
+    "source": "Google World: AI literacy schools generative AI",
+    "score": 4,
+    "sent_at": "2026-06-22T11:30:26.962316"
+  },
+  {
+    "title": "EU and OECD launch AI literacy framework for schools - Digital Watch Observatory",
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBzcENVdmkwM3VtRU9oblZOaUQySm8zbXc3Wk1zOEZpZXlCeWRIWUI4NDdGamt3ZC1BSkg3VXRrX3Z4VUtBUlU4N2tGMVFNQmV3eG9nd1R0ekU5aFpvblpXV0xzUzJuUTVfSjJVbm5zcmY?oc=5",
+    "published": "Sun, 21 Jun 2026 14:00:00 GMT",
+    "source": "Google Europe: AI education Europe schools guidelines AI",
+    "score": 13,
+    "sent_at": "2026-06-22T11:30:26.962316"
+  },
+  {
+    "title": "Verifying generative AI in schools - UOC",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONXpySG1QdnhiOHJmZHZQREtWYmZhemVYZUdUVDJ4TVhpVHcwYVN5SzhUREJWRlVZOHBwTjE3SkNIT2owbjJuc3ZpNndMcVB1SENCRW1aMDc0MTRiOWtWUUNIVkVMSzBxeDdEV18wbVJFWmtTd09veVdDX2d4WVFSWVo1WXdDOTE3eW5oYXlROA?oc=5",
+    "published": "Thu, 18 Jun 2026 07:33:17 GMT",
+    "source": "Google Europe: AI teaching Europe schools generative AI",
+    "score": 10,
+    "sent_at": "2026-06-22T11:30:26.962316"
+  },
+  {
+    "title": "Back to Pen and Paper: Norway Bans AI in Primary Schools as Britain Watches Closely - westminsterpimliconews.co.uk",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQOHg1SGFDX1F5em5sTWFKYkx4SlhSYndfTS1leGU0RElHd2pBa2Q0WjVCRm1RTW1MVWMxbmRiUGw0N2RGd1RQU3ItbzJaVFdpOV8tUXpzZEtUZVFUX05PcjIzekNaaEM3SDItdVBQUjF3UjJ4VVlOcFRBQ0lGTThYeG5yYkhhTkI5U0JjWXFSZ1ByaGlZ?oc=5",
+    "published": "Sun, 21 Jun 2026 22:08:12 GMT",
+    "source": "Google Europe: generative AI schools Europe policy",
+    "score": 6,
+    "sent_at": "2026-06-22T11:30:26.962316"
+  },
+  {
+    "title": "“Talents For Tech” ar “Google.org” atbalstu un “Riga TechGirls” palīdzību nodrošinās bezmaksas mākslīgā intelekta prasmju apmācības Latvijā - Inbox.lv",
+    "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNLTZxdGZwLWRvSjZUWE9OOUhwNHBqTFFfSlNlZGhJTjI0cWxxNm9hN19adTlUWllCbzhMLWFFM2dUa2NlLW1jeHUyVjNWZENHR08tNkhOdkhyZmY3U2NyWm5TSlNtRUlCQnptWjNhbU5CU0VMMDlGSG96NGpfVHdpQUNmX1Q1dVc5WE16Y0pyb3dtT1VyRmVYOXgxS3pKbFhSQVRkTm1PcW9uUjItMDNuU2lCS21HZ1NzWVoyRTUzNk1peEJsRHBHN3pjeVFnTkVUemVYSV84S3VuUmh1N3F0Zkw0SFMxMUNfQi1vbEktU0p1bzRXcEJiTUVMNlN1ZU1FSWxhdFFB?oc=5",
+    "published": "Thu, 18 Jun 2026 09:00:56 GMT",
+    "source": "Google Latvia: mākslīgais intelekts mācībās Latvija",
+    "score": 7,
+    "sent_at": "2026-06-22T11:30:26.962316"
+  },
+  {
+    "title": "Edgars Voļskis: Izglītības sistēmas galvenajam mērķim jābūt kritiskās domāšanas attīstīšanai - LSM",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPcFhHRTBjRy1vTVAyRFcwYW5KckRWRFB6WmVUUFItRHFkeUh4WV9hSXhqblp3RjdNYTE1Nk9jc0VXTW1kT1FMZ3Z4cnNhNFdBMG9sZjViVGdlSDFOUlVkNDNLT1hGM1c2WkJMa3dsdVFDc25kem9oc09aeFU1NDJNTnhtTWF2X1dzVzFtbmw3UnhkcGJiOEx6UmxSSE5Kc3BXWVRkYU1zRVI5ajFYUVVlUVlPQmlKMlVSeXFwYi1YNnZ3cEtWYmlTTTNRbEYtTkQwVU01UzRPeXhjR2RSNmxvRkRR?oc=5",
+    "published": "Wed, 17 Jun 2026 22:58:55 GMT",
+    "source": "Google Latvia: izglītības tehnoloģijas Latvijā MI",
+    "score": 0,
+    "sent_at": "2026-06-22T11:30:26.962316"
   }
 ]
