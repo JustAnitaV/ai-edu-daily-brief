@@ -186,6 +186,9 @@ def fetch_news() -> dict:
     world_queries = [
         "generative AI K-12 education",
         "LLM classroom school students AI learning",
+        "LLM in education schools",
+        "AI for inclusive learning",
+        "ASR, TTS, translation in classroom learning",
         "AI homework school students generative AI",
         "AI tutoring school students chatbot learning",
         "AI literacy schools generative AI",
@@ -206,6 +209,9 @@ def fetch_news() -> dict:
         "LLM classroom Europe school education",
         "AI teaching Europe schools generative AI",
         "AI assessment schools Europe policy",
+        "LLM in education schools",
+        "AI for inclusive learning",
+        "ASR, TTS, translation in classroom learning",
     ]
 
     europe_sources = [
