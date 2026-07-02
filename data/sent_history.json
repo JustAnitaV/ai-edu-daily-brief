@@ -1,13 +1,5 @@
 [
   {
-    "title": "'Losing a generation': Why some countries are moving fast on AI in schools - Australian Broadcasting Corporation",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUV81X1ItY21vVmtNd1V5ZzJwV3AtVjFWVkViX0VfRHQzZUlURkltTVRwT0F1MzNTM3k5bEoyaW55WWhNOUowNFpNMlRrckUyMGRVVC0wWk05amlNUXBrQ3ZITFBjTzhCdU1HcmJPaUMxWHBzSUZ3dmx5ME83RTZJV00tRQ?oc=5",
-    "published": "Sat, 30 May 2026 19:12:22 GMT",
-    "source": "Google World: AI literacy schools generative AI",
-    "score": 6,
-    "sent_at": "2026-06-01T11:05:50.942982"
-  },
-  {
     "title": "AI is degrading the value of a university degree - LSE Impact - The London School of Economics and Political Science",
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU2xzazZXTVZEeHZIVVRfTWtOal81eEducGQ3bldqeUJ3MnhXMjZRQWZ2UFNteDRNUTh0VkxrR0V3Z3g2dkdGdEpsc3M5T1BqcXNsdEE2MTJCa3NzYWhvZG9rTXJXTHRsVDVMOHpGdGxWQXdCUnBkdHJLNjNYZlBOTnNpTDlEb3pwOVQ0eUJQcFpuQ3hGVDdVRklPUExPVXF0TUh3b2Nzb19lbWM?oc=5",
     "published": "Thu, 28 May 2026 13:26:47 GMT",
@@ -758,5 +750,45 @@
     "source": "Google Europe: generative AI schools Europe policy",
     "score": 1,
     "sent_at": "2026-07-01T09:38:55.854334"
+  },
+  {
+    "title": "Where chatbots fit in the curriculum conversation - K-12 Dive",
+    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWjFvN0lhanZzeGtRdnJjOHdrcmtkX28ta3FFVmpDeFBlOVVfWko2TFZ5MktObHZlUk9IWVF4cWlPemdVcVBtcExXNlRoNlZDeVhRdDl3amVrUzM3Qm5FZkN0dW1FWXhCWlhkVWtPZDdHczM1OS1panBmQWdWZTV4YkJ5RHlVdW5YdGQwN1dIZw?oc=5",
+    "published": "Wed, 01 Jul 2026 20:13:52 GMT",
+    "source": "Google World: generative AI K-12 education",
+    "score": 13,
+    "sent_at": "2026-07-02T08:42:48.464289"
+  },
+  {
+    "title": "10 AI Tools Irish Teachers Should Explore This Summer - Schooldays.ie",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcld1QmVQcnZQaTZzdjk4MDhvczNRcnZwWWhBeU1UTlhUZEtsLXNjZVBJc1JqZE1mMjdndWZuanRUVGpWRnRqTnVzdEt3MjRWMklzRUg1VEpNS0hlUlpybFFYdVRNQWhLUDRITG9BTS1YRE1YeXZKYVVablRZRGEwMGJfZVdWQUVnZkdpbkJfbVlfSTZfem1wYw?oc=5",
+    "published": "Wed, 01 Jul 2026 08:45:14 GMT",
+    "source": "Google World: AI for inclusive learning",
+    "score": 6,
+    "sent_at": "2026-07-02T08:42:48.464289"
+  },
+  {
+    "title": "AI Will Make Learning More Human - BW Education",
+    "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPclp0bDFJUFd0eHBKZ0dEVnVKdTRKV1ktV2FzSVBTdWdqRmV1TTBockU4M1BqamRMNGNwWi11SXkyV25raVJJdGtJT0o0TGFnenBzOUtMRzVsQldjXzJNOVJtR19qRkYwczVGZTE2d2Rzakl5S2d3a0hMX1BxZXZ3Mg?oc=5",
+    "published": "Thu, 02 Jul 2026 04:14:35 GMT",
+    "source": "Google World: AI for inclusive learning",
+    "score": 4,
+    "sent_at": "2026-07-02T08:42:48.464289"
+  },
+  {
+    "title": "How GenAI can amplify co-creation in higher education - Times Higher Education",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOdVFSN19hbGhjMldhZnhtSUh2RjlpNllVdENXanMtWFVWT2dIOW1hLWxHZkhvblc2cDZZczNGZnYxdFJkR29hWjdsbnBiVDVWTC1MUTZGU1hza0FCWHZ3VmlRWUp0cUJXMjRPNHpaRTVMWmZlTzg2UzF2M0FHOW1pekdwQkdBZ0U0WDNrd2RiX0RzbkF6aVgtQQ?oc=5",
+    "published": "Thu, 02 Jul 2026 00:01:00 GMT",
+    "source": "Google World: AI for inclusive learning",
+    "score": 1,
+    "sent_at": "2026-07-02T08:42:48.464289"
+  },
+  {
+    "title": "AI Watch: Global regulatory tracker - United States - White & Case LLP",
+    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbnFCYmQ4ZElvUk9tUFQ0Z210S2hrNmtMaGhid3IxZmozUnVDUm8tZ0FrY05nNlR5bXZLOUk5WWJkcHVjMzhvazJ6M3I2bGtCUlZFWlBBT2l1MGdGbExWY09kWXZZNlQxTW16VjJzSC1McDZ2N21oTjdqclZnVHZTN1VpbmRacC10NjZNYVNIWnBOUGRpblNsRURZbw?oc=5",
+    "published": "Tue, 30 Jun 2026 12:00:00 GMT",
+    "source": "Google Europe: AI assessment schools Europe policy",
+    "score": 3,
+    "sent_at": "2026-07-02T08:42:48.464289"
   }
 ]
