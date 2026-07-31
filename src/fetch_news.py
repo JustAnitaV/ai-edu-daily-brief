@@ -188,6 +188,7 @@ def fetch_news() -> dict:
         "LLM classroom school students AI learning",
         "LLM in education schools",
         "AI for inclusive learning",
+        "AI for students with special needs",
         "ASR, TTS, translation in classroom learning",
         "AI homework school students generative AI",
         "AI tutoring school students chatbot learning",
@@ -211,6 +212,7 @@ def fetch_news() -> dict:
         "AI assessment schools Europe policy",
         "LLM in education schools",
         "AI for inclusive learning",
+        "AI for students with special needs",
         "ASR, TTS, translation in classroom learning",
     ]
 
@@ -224,6 +226,7 @@ def fetch_news() -> dict:
         "mākslīgais intelekts skolās Latvijā",
         "MI izglītībā Latvijā skolas",
         "ģeneratīvais MI skolēniem Latvijā",
+        "iekļaujošā izglītība",
         "izglītības tehnoloģijas Latvijā MI",
         "mākslīgais intelekts mācībās Latvija",
         "MI vadlīnijas izglītībā Latvijā",
