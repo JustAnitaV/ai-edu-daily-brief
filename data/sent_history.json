@@ -1,45 +1,5 @@
 [
   {
-    "title": "The Growing Divide Between Student AI Adoption & Institutional Change - Solutions Review",
-    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVUI0akFDQ19WWGhuNS1uMUNZTENHN0x5MDctVE9nc3BvbXFPeF9UdVlVenVWMGxvU01GSVU1YzJmcTFQRTVRSWVZb3RXSEtPbWYwTjlzTFFqbUJhd042Um9LLXJUemtRbjZ0Y043NFB1VGNfMVROZGNTb2ZZOGZydzhLaUEwNjZqWGk2N2RnV2t0b0c4VVotOHp0cF9NdVdCTkwtOW13OXJmNHNrNWgxSFJXeEY?oc=5",
-    "published": "Fri, 14 Aug 2026 13:28:33 GMT",
-    "source": "Google World: AI for inclusive learning",
-    "score": 6,
-    "sent_at": "2026-08-15T06:21:05.279599"
-  },
-  {
-    "title": "AuraLearn: The homegrown African AI tool opening STEM doors for visually impaired students - Daily Monitor",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOWDFJd0Nya2U5cXlYdmVMbHRoYUVIMDVudFFPcUNYM1Fhb0x1NWVlVVpKVFdmTXFXeWxLekJ6Q3JRV2JZd3lyeEZNeklKUmRHeThJcXRndy1pSkFodmNNVnRSZFVLY0hOMUxDcmNJVXNhNmc2M1NCTDNZa01aSzdLS2dzZ0tNamFGczhTZzNKYVJuYThlaUR4bjJ0U2pXclpvcEVfcG82QlEzQnE3QTBMSEl0Q3hXRWJibHdtUkVILTRzSlNhUnotYWF2UnA0d3o3U20tbU9iSjNyUGt4TVcxZndnUlg?oc=5",
-    "published": "Fri, 14 Aug 2026 11:17:42 GMT",
-    "source": "Google World: AI for inclusive learning",
-    "score": 6,
-    "sent_at": "2026-08-15T06:21:05.279599"
-  },
-  {
-    "title": "How AI and Smart Classrooms are Changing the Education System in India - IBEF",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNeW1EQlA2cVVCbnlTdE9JS0JoaS1CYmtkdVFhczNZY2RXeVc5QjBVN005RDNpV21KQTJaVDJScktYTWpxc3M3a0JPR2pJeGM2WG1aMEZmQW5DUVppYnRlS3hwQ2VZcXVqbThhTDYxVVduRkpKQkVCWkFVMkRLcUFTMWp6a2tkb0l5UTRqeV92R2ZmYXVCOWQ4WVFsekJDUQ?oc=5",
-    "published": "Thu, 13 Aug 2026 07:00:00 GMT",
-    "source": "Google World: AI for inclusive learning",
-    "score": 6,
-    "sent_at": "2026-08-15T06:21:05.279599"
-  },
-  {
-    "title": "Beyond Digital as Usual, Artificial Intelligence for Accessible Learning - Unicef",
-    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRUFWUHE1dG5TUEZ2cDhEaXV3YzhzTWRHSkNlTmtsVWpnR2lweEUybkZ6R2VyeXVVQ19KdVdUQkw4VXp5eDBZTHBqZk1nLVVLMHVGZW5qakJPOXdHOGYwVnpNXzFyMmw5VU5RbWUwMldRR2VweWxvdms5ek1yMjY1a0dwSWVjYmQ3SzFNd1NJdDJnbHhWUHl4cDh0MTNoMVRhUF9MaVNWdGowanFnNzVQSQ?oc=5",
-    "published": "Fri, 14 Aug 2026 09:06:22 GMT",
-    "source": "Google World: AI for inclusive learning",
-    "score": 4,
-    "sent_at": "2026-08-15T06:21:05.279599"
-  },
-  {
-    "title": "Toward a Common Supervisory Methodology for AI in Banking - The Recursive",
-    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSnNncG5rZk0zUE1GUEFNcHRkbHJHSjktUDZYYmlFZnRIZXRMQ0lEVS0ydFh5Y2lsclliUEYySk40VVVlMjJJOFpWcmFpWU1tUHEtdmNfMGNoTDRwN3NFejRqTnVyUGQzWTlBRGJRNHhxS0NaNzJWMEM4MUtPRHRYQng4SDF6WmpzRWFQd0hUMmxiMmpkOUhuV3FVdkc?oc=5",
-    "published": "Fri, 14 Aug 2026 10:38:50 GMT",
-    "source": "Google Europe: AI assessment schools Europe policy",
-    "score": 0,
-    "sent_at": "2026-08-15T06:21:05.279599"
-  },
-  {
     "title": "As a new school year starts, Mike Miles defends controversial changes in Houston ISD - Houston Public Media",
     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSXQ4aEM4S1NESXQ5Q2gyR21WM2g1SjVFYi1VVjBfVHFNRUFmMjdHNXdwanZJM3VabEtoTjJ2bXFINW5HTWxQeHgyYXJQOE9aLVdDX29mMGxzaThSS253ODlaOVYwMkcxdlM5NGxybVdEQjd4MC1VeHl3LU8tMlgwQXdVWkZwUUlXQllnTUI4dzNmcHdrMmY3NXRjTTBKNFktR1JWVVg0QTh0dGR1dms5d21SajhlaEZzV1Fmd1JGMWdBWEVZbWwtUUFQNDbSAdQBQVVfeXFMT0hXNzBlTVZNanlBY3ZCY1JVTG1qalBJY2xEWm5YTkt1NGR2azdDU2Zja2hoUUMxOHJLQ0FJcjZDRWZsSzUxXzBLSU1IYjR6YUtjNHh3VVVteDIydWg1cmphdW9PNzFaNHNHajU0RGl3MXc3NVE4WWV5OGFTejlWNnF1cGJnTVhmSVdpbmZwa0JsSV9EdXlWS295d3VPZlcxaDlsQWo3MUxHV2tZbUl0VlI3X283ck1ZQXp0bEFFM2JlOTFOSVhibGpVWERjNDJXdXFHc0k?oc=5",
     "published": "Wed, 12 Aug 2026 15:36:36 GMT",
@@ -1366,5 +1326,45 @@
     "source": "Google World: AI for inclusive learning",
     "score": 0,
     "sent_at": "2026-09-13T10:46:15.223114"
+  },
+  {
+    "title": "Norway rethinks Generative AI in its classrooms - The Educator K/12",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORkFxRm56UGNmQVhNTEFGcU1qekpacDMtY0NLWnlNTlJyb0lrd21hY1MtNGZTa0htTXdkbV9MY3hNdmtCNEJrSVhPNG9oYzhWYkZsWHRzOGdhWXhzWE1vUTFwZHpNb1AzcVhLMnBxNFIxNHY2NmFNNFNLRXBYMnFOaFNEM196eXYzdkhJMUFBcVdDMWVIZVZYOXh0djhRQQ?oc=5",
+    "published": "Sun, 13 Sep 2026 14:00:00 GMT",
+    "source": "Google World: generative AI K-12 education",
+    "score": 10,
+    "sent_at": "2026-09-14T11:08:26.615442"
+  },
+  {
+    "title": "States urge schools to use AI, but leave teachers on their own to stop cheating - KOTA Territory News",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNR3pxUTFza0NKQW12TlRhYm9zRlVWUWZGV1htbmM2TFByWkQ5LXd0a0k5VTZiU0RDa29uZngyVkNuWDZZOUxpbXo5MmRncC1hSWtEMnRwcEU3NEFzQ1p6emtOVW9WYUcxZUxBSTRhWFdtd1FOMDJzZWc1bHpOUmpRaWd4bk5jX0FSZWdPUFhrRXAxQVpCcVpJb1BJTzZBdjhKcHfSAbYBQVVfeXFMTmJIWkxsZ0h0TGVRREwwbXoxTnNuT3pKcXFBclFiaG4taEdBZTQ4N3haZmEyTWlkOWZ6YnZtOHhUa1p5VE9xYmw0VHpQVHVoWklhSG5Lb0tBYWdaalYtYUotcW1UMUxLNXgzM19mOG5leVhjS3VvM3JXSFBoak1rdjNrMXZBUTJBdXZsU3FQS2RYVjZMNFNnN3RBSDZ3MTZTOVh4ZmE2bFp2bHAwNXlwUEt6X1NpRHc?oc=5",
+    "published": "Sun, 13 Sep 2026 00:00:00 GMT",
+    "source": "Google World: AI cheating school policy generative AI",
+    "score": 9,
+    "sent_at": "2026-09-14T11:08:26.615442"
+  },
+  {
+    "title": "New York City Public Schools banning AI use through middle school starting this year - ABC News - Breaking News, Latest News and Videos",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQVFUVERKNGMyTDlwWUQ2Z29SYldYc1pyRHZvZHNFXzhsRFVROWE2T05vZ3lfLUE3Nm5tYWtxbU9fZVhIMUNXWFZ0aktrTHBUNHlFQll2QW94ZGdBbWFUT0tUcElMT1NMb2VkNDM3NkN4ZGYtb3E0eThhVHhsbkZkZEJLM2RSM2d1M3piNThHQWp4QzRDZjJfdl9qM0nSAaIBQVVfeXFMTl9KZ3YzOW9vdV9PcWhjTmV6bDZxTjZZYmRtZmNKdXRaenlXbEhETXZrRXVPdFJFZFNlcUM3WTZwRl9KS3VMWndXZS04NW53Vy1rUlFiWlkyRThhamNiVEg5bEdrOFBGYXFpelNnRUtLN2hLUWxxZjZoekhueHRjLUJ4aVJrNEFqSWtDUnNTVDlJSkxXM043R1lDbFdBME13ZHJ3?oc=5",
+    "published": "Sun, 13 Sep 2026 00:11:18 GMT",
+    "source": "Google World: AI literacy schools generative AI",
+    "score": 6,
+    "sent_at": "2026-09-14T11:08:26.615442"
+  },
+  {
+    "title": "IIT Madras, NVIDIA Ship 4 Open Indic AI Models [2026] - tech-insider.org",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9yR3YtdG16MFhWbTNDV201cFVhX2ZvVHBrOVBfNElSUkdyVGdlWEpseTd3OUNseEFwVlQ4TW1kYl9RZWp0cGtqaWNxT2I5UWJiTERwbVNiU3BkcEhBUTNsUDRBODNobGRsSTdtd0dQQXBiSzBPamJpX0E1MXM?oc=5",
+    "published": "Mon, 14 Sep 2026 00:12:17 GMT",
+    "source": "Google World: ASR, TTS, translation in classroom learning",
+    "score": 0,
+    "sent_at": "2026-09-14T11:08:26.615442"
+  },
+  {
+    "title": "Latvijas MI čats “Ajelix” paziņo par investīciju datu drošībā un infrastruktūrā - Labs of Latvia",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUUtCU0p2N3k3RzNaeXZYX0hsNFdhRGV0VFczdTdOc1FjRHhjVmtkb0ZNdy1tY25pMTVsMkFWajBJXzlScTFCbmlpQWNqMkJDZkVHSVhWbFp6TEo1MFQ4Zmd4d1JBYjc2bWQwTWhKbk14aVBPQVdPWnh3QmQzZml4WUVZVWF5WmhKZjVGbEZMbDdodTZhY0h3YlRuem12VkQxMFVGajV1T3lGTHIzaVZV?oc=5",
+    "published": "Mon, 14 Sep 2026 06:45:14 GMT",
+    "source": "Google Latvia: mākslīgais intelekts skolās Latvijā",
+    "score": 6,
+    "sent_at": "2026-09-14T11:08:26.615442"
   }
 ]
