@@ -194,8 +194,8 @@ def fetch_news() -> dict:
         "AI tutoring school students chatbot learning",
         "AI literacy schools generative AI",
         "AI assessment school generative AI grading",
-        "AI cheating school policy generative AI",
         "AI teachers lesson planning generative AI classroom",
+        "AI tools for reading comprehension",
     ]
 
     world_sources = [
@@ -214,6 +214,7 @@ def fetch_news() -> dict:
         "AI for inclusive learning",
         "AI for students with special needs",
         "ASR, TTS, translation in classroom learning",
+        "AI tools for reading comprehension",
     ]
 
     europe_sources = [
