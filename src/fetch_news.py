@@ -230,6 +230,9 @@ def fetch_news() -> dict:
         "izglītības tehnoloģijas Latvijā MI",
         "mākslīgais intelekts mācībās Latvija",
         "MI vadlīnijas izglītībā Latvijā",
+        "tehnoloģijas skolās skolēnu atalstam",
+        "konferences, semināri, pasākumi par tehnoloģijām un MI izglītībā",
+        "lasītprasme un tehnoloģijas",
     ]
 
     latvia_sources = [
