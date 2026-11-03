@@ -1,21 +1,5 @@
 [
   {
-    "title": "AI in the classroom - Deming Headlight",
-    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1IZFo2VWU3LUVtZ21IMmJ5MzlGamFwS3N5RUdlQWtYbmsxLXNSVjF3NjAwTjlWdFlEMzlUS3hfWnkwUDdUVG5HUXl2Y2xjNkV2b1pZWFNHSjFOMjNydzRUSzFZdm44cUpKVkREZWFJWGg?oc=5",
-    "published": "Sat, 03 Oct 2026 17:06:18 GMT",
-    "source": "Google World: AI for inclusive learning",
-    "score": 6,
-    "sent_at": "2026-10-04T11:40:01.284040"
-  },
-  {
-    "title": "Europe Joined the AI Race: The Real Gap Is Scale - economy.ac",
-    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE83dkVTNUp6eVhzaGZfSDRMZ3JUbm1aSTlQSXNMQWJOeWRneFBaV1FEYVBkWEIybDhrVzdwWk5GLU1yUEw2NTh1Q0dyQUhqanZfRFhBVFVKQ19Ndw?oc=5",
-    "published": "Tue, 29 Sep 2026 07:00:00 GMT",
-    "source": "Google Europe: AI assessment schools Europe policy",
-    "score": 1,
-    "sent_at": "2026-10-04T11:40:01.284040"
-  },
-  {
     "title": "Slow down to truly learn software engineering, even with AI - TechGig",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMjZhZWJ4cjZjQ3NYUU1abzhNRmZnYWoxSk1RYnlOa245aVlxb3JrSnJ5X01reWtHdkpRay1rT0hGT2E1LUdqM19yd2NPeHg5Wnh0REcwdnFxZ0RPNDFvSEstY195YS1XR0JUal9Zdi05VnlTTWtIYm9nTHJxSzFheGFKaG5zODF3SlVhX0E5dGFNcXBQM2Y3RkRRaUd0VEpCazBtaE5KY9IBrAFBVV95cUxNdkRaTTVLY05sbGpvMGx3OHl6c09NWXBDVGxMT2xtUjBhdmg1NzlOQXFQMkpFLTlydUhOalJHU2VCRHB6VUoxcmJGdVR3UlM5cGowS3ZHeUJuSnBTRzlnN1JDU0pnNXZLdlFkdWxkVkdKaC1rcUZmTTVOaDRQME5aWkFKVUJYRkFpbFRnZ3JQQWhXMlBIa0FRejdidGtOcmtid3ZKdWEySjUzemZN?oc=5",
     "published": "Fri, 02 Oct 2026 00:05:28 GMT",
@@ -1270,5 +1254,45 @@
     "source": "Google Latvia: mākslīgais intelekts skolās Latvijā",
     "score": 0,
     "sent_at": "2026-11-02T14:00:19.273669"
+  },
+  {
+    "title": "4 Critical Security Considerations for AI in K–12 Schools - EdTech Magazine",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQM3A4TDJzckJlWUtXY1ZKR1YxZVFVSnlWVzdqaVA5Z1RsWlpscWNJNDRPYXYydTVZeG5LSDhJZ2tmQ3cxSmNxUzB4cjBpTTNkcDJBREcxbFk3QVJ5TTI0WlpUQlFTQ3NTRG40R21WdlVUSTU4dEs0dUpRS1pOMV84VHU1U0lFbTVSWGY0QmU5TWxtNjQzRVBuUWFoc0hkZw?oc=5",
+    "published": "Mon, 02 Nov 2026 18:25:11 GMT",
+    "source": "Google World: generative AI K-12 education",
+    "score": 6,
+    "sent_at": "2026-11-03T13:13:04.930380"
+  },
+  {
+    "title": "Generative Artificial Intelligence in Clinical Reasoning Education: A Focused Review and Framework - Cureus",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOTjdmaWJjVHEwYlVXTnFjZTVaMTZlalRTYXQ4LTc3NS1UUnpQQVQ0clJPLVVyZ3ZOZG1ZRVlzbUduWTVzSERLaWIzMjJoLVpHaFVlcmg1Q0U0TzF6NGVvX3ZMMzdNQWZhVUpsanpld01XcGVva2k2Ung2Z19va3E5bHBxWl8wTjRLblBIX082U1UzczZTTWl5d202djJEUVEtSzQxWlNmUGhsT1F6THZaWVZlLTU4c1RGMGwzdFRDS2VTSnlwN1BRamRIamZCLVFnenc?oc=5",
+    "published": "Mon, 02 Nov 2026 15:14:59 GMT",
+    "source": "Google World: AI assessment school generative AI grading",
+    "score": 4,
+    "sent_at": "2026-11-03T13:13:04.930380"
+  },
+  {
+    "title": "Digitalization and artificial intelligence transform education system - Silk Way TV",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPY29HVXhYMnlrWDRiZG1YS2VlaTFKZ3JNamt5VGZMSDByMUlVcmZPQm9yTjJJd05jcTQyLV82VHFpMFNSVmpyZHhTV3VlR1Ffd0ZabHRRc0R6czZwcnNxUTljSkhHc1c0WWpsU202OWFfcDIwVXAxdDFEaE02OGFvbzA5U1RjYnFyLVV4c21SY3Q3dmR5UHd3TGZxY0ZoMWJ6?oc=5",
+    "published": "Tue, 03 Nov 2026 10:19:41 GMT",
+    "source": "Google World: AI for inclusive learning",
+    "score": 0,
+    "sent_at": "2026-11-03T13:13:04.930380"
+  },
+  {
+    "title": "Humans are the subjects who direct and control technology. - Vietnam.vn",
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNWkVXM1RDZno2dDlPbjZ2OElBcTViODJ6ZkRQalZuTG9HUWhvMDVLanVlVDdBaUVCS3JRSGFyaUVNbDZNZVlhQXhsUW9rbFVrSTFIcldOMWNMMEpzWVhfZTg2cHZ6bHlmeE5oVWhlRHppUHNyb0Jua3RqYUtsTmFSV2xScThrSVU?oc=5",
+    "published": "Tue, 03 Nov 2026 08:56:29 GMT",
+    "source": "Google World: AI for inclusive learning",
+    "score": 0,
+    "sent_at": "2026-11-03T13:13:04.930380"
+  },
+  {
+    "title": "CyberStrikeAI hits schools: Kaspersky details LLM-led intrusions - Softonic",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbTk2OEpzSDVJb3FkLWRhUURldXlodHJBdVVsZU91Y2t6WnVkbXdPQUtDNmVnemFubjNTY0dRNjYybXZ3ZUZMbUdzTHhJUl9MRFZkTWVWdHN2d05SWjFfZkpsOVdMWUxHZTI0TncxWHkwMzREdjVHR0E1VHNHc2p6bGFCYWxtUEk0VGhRYzMwQ1VCeXNqUlh5Q3JMSkw?oc=5",
+    "published": "Mon, 02 Nov 2026 12:15:58 GMT",
+    "source": "Google Europe: LLM in education schools",
+    "score": 10,
+    "sent_at": "2026-11-03T13:13:04.930380"
   }
 ]
